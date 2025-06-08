@@ -6,7 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sattva - Mother's Homely Food</title>
   <script src="https://cdn.tailwindcss.com"></script>
-</head>
+  <style>
+.combo-card {
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #fff7e6;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.combo-card h2 {
+  font-size: 1.6rem;
+  color: #b34700;
+  margin-bottom: 10px;
+}
+
+.combo-items {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.combo-items li {
+  margin-bottom: 6px;
+}
+
+.price, .min-order {
+  font-weight: bold;
+  color: #222;
+  font-size: 1.1rem;
+}
+
+.combo-card img {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+</style>
+  </head>
+
 <body class="bg-yellow-50 text-gray-800 font-sans">
 
   <!-- Header -->
@@ -56,7 +98,6 @@
   </ul>
   <p class="price">Price per plate: ₹225</p>
   <p class="min-order">Minimum order: 5 plates</p>
-  <img src="images/combo1.jpg" alt="South Indian Combo" />
 </div>
   </section>
 
