@@ -87,6 +87,32 @@
   margin-top: 15px;
   border-radius: 8px;
 }
+    .combo-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px;
+}
+
+.combo-card {
+  background-color: #b7e064;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Responsive for tablets and phones */
+@media (max-width: 900px) {
+  .combo-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .combo-container {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
   </head>
 
@@ -123,6 +149,7 @@
   </section>
 <section id="combos">
   <!-- Dishes -->
+   <div class="combo-container">
   <div class="combo-card">
   <h2>Combo-1</h2>
   <ul class="combo-items">
@@ -194,7 +221,9 @@
     <li>Rasam/Sambar/Dal</li>
   </ul>
   <p class="price">Price per plate: ₹170</p>
-  <p class="min-order">Minimum order: 5 plates</p>  
+  <p class="min-order">Minimum order: 5 plates</p> 
+  </div>
+   </div>
   </section>
 
   <!-- Contact -->
