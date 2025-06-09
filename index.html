@@ -1,130 +1,76 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sattva - Mother's Homely Food</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-.combo-card {
-  border: 2px solid #ddd;
-  border-radius: 12px;
-  padding: 20px;
-  background-color: #AAD15F;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.combo-card h2 {
-  font-size: 1.6rem;
-  color: #FFFFC2;
-  margin-bottom: 10px;
-}
-
-.combo-items {
-  list-style-type: disc;
-  padding-left: 20px;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.combo-items li {
-  margin-bottom: 6px;
-}
-
-.price, .min-order {
-  font-weight: bold;
-  color: #222;
-  font-size: 1.1rem;
-}
-
-.combo-card img {
-  width: 100%;
-  margin-top: 15px;
-  border-radius: 8px;
-}
-</style>
-  <style>
-.combo-card {
-  border: 2px solid #ddd;
-  border-radius: 12px;
-  padding: 20px;
-  background-color: #AAD15F;
-  margin: 30px auto;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.combo-card h2 {
-  font-size: 1.6rem;
-  color: #FFFFC2;
-  margin-bottom: 10px;
-}
-
-.combo-items {
-  list-style-type: disc;
-  padding-left: 20px;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.combo-items li {
-  margin-bottom: 6px;
-}
-
-.price, .min-order {
-  font-weight: bold;
-  color: #222;
-  font-size: 1.1rem;
-}
-
-.combo-card img {
-  width: 100%;
-  margin-top: 15px;
-  border-radius: 8px;
-}
     .combo-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 20px;
       max-width: 1200px;
-  margin: auto;
-  align-items: stretch; /* important! */
-}
+      margin: auto;
+      align-items: stretch;
+    }
 
-.combo-card {
-  background-color: #b7e064;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
+    .combo-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #b7e064;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      min-height: 500px;
+    }
 
-/* Responsive for tablets and phones */
-@media (max-width: 900px) {
-  .combo-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+    .combo-card h2 {
+      font-size: 1.6rem;
+      color: #FFFFC2;
+      margin-bottom: 10px;
+    }
 
-@media (max-width: 600px) {
-  .combo-container {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
-  </head>
+    .combo-items {
+      list-style-type: disc;
+      padding-left: 20px;
+      color: #333;
+      margin-bottom: 15px;
+    }
 
-<body class="bg-#FFFFC2 text-gray-800 font-sans">
+    .combo-items li {
+      margin-bottom: 6px;
+    }
 
-  <!-- Header -->
-  <header class="bg-yellow-200-md">
+    .price, .min-order {
+      font-weight: bold;
+      color: #222;
+      font-size: 1.1rem;
+    }
+
+    .combo-card img {
+      width: 100%;
+      margin-top: 15px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 900px) {
+      .combo-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .combo-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="bg-yellow-100 text-gray-800 font-sans">
+  <header class="bg-yellow-200">
     <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <img src="logo.png" alt="Sattva Logo" class="w-16 h-16 rounded-full">
@@ -138,21 +84,19 @@
     </div>
   </header>
 
-  <!-- Hero -->
   <section class="bg-green-100 py-16 text-center">
     <h2 class="text-4xl font-sans mb-4">Mother's Homely Food</h2>
     <p class="text-lg text-yellow-800 max-w-xl mx-auto">Delicious, pure, and traditional meals cooked with love – just like Amma makes.</p>
   </section>
 
-  <!-- About -->
   <section id="about" class="max-w-5xl mx-auto py-16 px-4">
     <h3 class="text-2xl font-bold mb-4 text-yellow-600">About Us</h3>
     <p class="text-lg leading-relaxed">
       At <strong>Sattva</strong>, we bring you the magic of home-cooked South Indian food prepared lovingly by mothers using age-old recipes, pure ingredients, and lots of care. Every meal tells a story, and every bite reminds you of home.
-      Here at Sattva, We take bookings from 5 people to 40 people, Once the choice has been made, please proceed to the <strong>Contact</strong>, and give us a call or write a mail regarding the order and the details of the order. Thank You!!.
+      We take bookings from 5 to 40 people. Once you've made your choice, proceed to the <strong>Contact</strong> section to call or email us your order details. Thank you!
     </p>
   </section>
-<section id="combos">
+  <section id="combos">
   <!-- Dishes -->
    <div class="combo-container">
   <div class="combo-card">
@@ -298,21 +242,19 @@
     <li>Paneer Butter Masala Rice</li>
    </div>
   </section>
+  
 
-  <!-- Contact -->
   <section id="contact" class="bg-green-100 py-16 px-4">
     <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-2xl font-bold mb-4 text-green 500">Get in Touch</h3>
+      <h3 class="text-2xl font-bold mb-4 text-green-500">Get in Touch</h3>
       <p class="mb-6">Want to place an order or join us? Reach out via WhatsApp or email!</p>
       <p class="font-semibold">📞 +91 9686358585</p>
-      <p class="font-semibold">📧 g3shalini@gmail.com.com</p>
+      <p class="font-semibold">📧 g3shalini@gmail.com</p>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="text-center text-sm py-4 text-gray-600">
     © 2025 Sattva. All rights reserved.
   </footer>
-
 </body>
 </html>
