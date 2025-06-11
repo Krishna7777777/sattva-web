@@ -9,51 +9,53 @@
     .combo-container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      padding: 16px;
+      gap: 20px;
+      padding: 20px;
       max-width: 1200px;
-      margin: auto;
+      margin: 0 auto;
     }
 
- .combo-card {
-  background-color: #b7e064;
-  padding: 16px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .combo-card {
+      background-color: #b7e064;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%; /* Ensures equal height cards */
+    }
 
-.combo-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
+    .combo-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
     
     .combo-card h2 {
       font-size: 1.6rem;
       color: #FFFFC2;
-      margin-bottom: 4px;
+      margin-bottom: 8px;
       font-weight: bold;
     }
 
     .combo-items {
       list-style-type: disc;
-      padding-left: 18px;
+      padding-left: 20px;
       color: #333;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      flex-grow: 1; /* Makes items take available space */
     }
 
     .combo-items li {
-      margin-bottom: 2px;
-      line-height: 1.3;
+      margin-bottom: 4px;
+      line-height: 1.4;
     }
 
     .price, .min-order {
       font-weight: bold;
       color: #222;
       font-size: 1.1rem;
-      margin-top: 4px;
+      margin-top: 8px;
     }
 
     @media (max-width: 900px) {
@@ -65,26 +67,25 @@
     @media (max-width: 600px) {
       .combo-container {
         grid-template-columns: 1fr;
+        padding: 10px;
       }
     }
   </style>
 </head>
 <body class="bg-yellow-100 text-gray-800 font-sans">
-<header class="bg-yellow-200">
-  <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
-    <div class="flex items-center gap-3">
-      <div class="src-center mt-6">
-        <img src="logo.png" alt="Sattva Logo" width="200">
+  <header class="bg-yellow-200">
+    <div class="max-w-6xl mx-auto p-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="src-center mt-6">
+          <img src="logo.png" alt="Sattva Logo" width="200">
+        </div>
+        <nav class="space-x-4">
+          <a href="#about" class="hover:text-orange-600">About</a>
+          <a href="#contact" class="hover:text-orange-600">Contact</a>
+        </nav>
       </div>
-      <nav class="space-x-4">
-        <a href="#about" class="hover:text-orange-600">About</a>
-        <a href="#contact" class="hover:text-orange-600">Contact</a>
-      </nav>
     </div>
-  </div>
-</header>
-</body>
-    <!-- LOGO WITH SCROLL TO TOP -->
+  </header>
 
   <section class="bg-green-100 py-16 text-center">
     <h2 class="text-4xl font-sans mb-4">Mother's Homely Food</h2>
@@ -94,153 +95,163 @@
   <section id="about" class="max-w-5xl mx-auto py-16 px-4">
     <h3 class="text-2xl font-bold mb-4 text-yellow-600">About Us</h3>
     <p class="text-lg leading-relaxed">
-      Welcome to <strong>Sattva</strong>
-   Mother's Homely Food, where every meal is a labor of love. Cooking has always been my passion, and the kitchen is where my heart truly feels at home. I’ve always cherished the joy of preparing meals for my family and loved ones, and that warmth now extends to every dish we serve. At Sattva, we believe that the secret ingredient to truly delicious food is love — combined with carefully handpicked ingredients and traditional recipes passed down through generations. Our motto, "Delicious pure traditional meals just how amma makes," reflects our commitment to bringing you the comfort, purity, and authenticity of home-cooked food in every bite.
+      Welcome to <strong>Sattva</strong> Mother's Homely Food, where every meal is a labor of love. Cooking has always been my passion, and the kitchen is where my heart truly feels at home. I've always cherished the joy of preparing meals for my family and loved ones, and that warmth now extends to every dish we serve. At Sattva, we believe that the secret ingredient to truly delicious food is love — combined with carefully handpicked ingredients and traditional recipes passed down through generations. Our motto, "Delicious pure traditional meals just how amma makes," reflects our commitment to bringing you the comfort, purity, and authenticity of home-cooked food in every bite.
     </p>
   </section>
 
-  <section id="combos">
+  <section id="combos" class="py-8">
     <div class="combo-container">
-  <div class="combo-card">
-  <h2>Combo-1</h2>
-  <ul class="combo-items">
-    <li>Rice Item (choose from the list)</li>
-    <li>White Rice</li>
-    <li>Dal / Sambar / Rasam</li>
-    <li>Curd Rice</li>
-    <li>Palya (choose from the list)</li>
-    <li>Salad / Kosambri / Raitha</li>
-    <li>Pickle</li>
-    <li>Papad</li>
-    <li>Sweet (choose from the list)</li>
-    <li>Vada (choose from the list)</li>
-    <li>Buttermilk/Tambuli</li>
-  </ul>
-  <p class="price">Price per plate: ₹250</p>
-  <p class="min-order">Minimum order: 5 plates</p>
-</div>
-  <div class="combo-card">
-  <h2>Combo-2</h2>
-  <ul class="combo-items">
-    <li>Chapati / Phulka</li>
-    <li>Any Curry</li>
-    <li>White Rice</li>
-    <li>Dal / Sambar / Rasam</li>
-    <li>Curd Rice</li>
-    <li>Salad / Kosambri / Raitha</li>
-    <li>Sweet (choose from the list)</li>
-    <li>Vada (choose from the list)</li>
-    <li>Pickle</li>
-    <li>Papad</li>
-    <li>Buttermilk/Tambuli</li>
-  </ul>
-  <p class="price">Price per plate: ₹250</p>
-  <p class="min-order">Minimum order: 5 plates</p>
-</div>
-  </div>
-  <div class="combo-card">
-  <h2>Combo-3</h2>
-  <ul class="combo-items">
-    <li>2 Chapatis/Phulkas</li>
-    <li>Curry (choose from the list)</li>
-    <li>Rice Item (choose from the list?</li>
-    <li>Raitha</li>
-    <li>Curd Rice</li>
-    <li>Sweet (choose from the list)</li>
-    <li>Vada (choose from the list)</li>
-  </ul>
-    <p class="price">Price per plate: ₹170</p>
-    <p class="min-order">Minimum order: 5 plates</p>
-  </div>
-  <div class="combo-card">
-  <h2>Combo-4</h2>
-  <ul class="combo-items">
-    <li>Rice Item(choose from the list) / 2 Chapati/Phulkas</li>
-    <li>Raitha</li>
-    <li>Curd Rice</li>
-    <li>White Rice</li>
-    <li>Rasam/Sambar/Dal</li>
-  </ul>
-  <p class="price">Price per plate: ₹170</p>
-  <p class="min-order">Minimum order: 5 plates</p> 
-  </div>
-  <div class="combo-card">
-  <h2>Combo 5 - Simple Meal Plan</h2>
-  <ul class="combo-items">
-    <li>3 Phulkas</li>
-    <li>Curry</li>
-    <li>Curd Rice</li>
-    <li>Rice Item</li>
-  </ul>
-    <p class="price">Price per plate ₹100</p>
-    <p class="min-order">Minimum order: 2 plates</p>
-  </div>
-  <div class="combo-card">
-  <h2>Breakfast/Snacks</h2>
-  <ul class="combo-items">
-    <li>Umpa</li>
-    <li>Soosla - ₹60 </li>
-    <li>Poha - ₹60</li>
-    <li>Pasta - </li>
-    <li>Sandwich - </li>
-    <li>Maddur Vada(1pcs) - ₹20</li>
-    <li>Masala Vada(1pcs) - ₹20</li>
-    <li>Cabbage Vada(1pcs) - ₹20</li>
-    <li>Soups</li>
-  </ul>
+      <!-- Combo 1 -->
+      <div class="combo-card">
+        <h2>Combo-1</h2>
+        <ul class="combo-items">
+          <li>Rice Item (choose from the list)</li>
+          <li>White Rice</li>
+          <li>Dal / Sambar / Rasam</li>
+          <li>Curd Rice</li>
+          <li>Palya (choose from the list)</li>
+          <li>Salad / Kosambri / Raitha</li>
+          <li>Pickle</li>
+          <li>Papad</li>
+          <li>Sweet (choose from the list)</li>
+          <li>Vada (choose from the list)</li>
+          <li>Buttermilk/Tambuli</li>
+        </ul>
+        <p class="price">Price per plate: ₹250</p>
+        <p class="min-order">Minimum order: 5 plates</p>
       </div>
-   <div class="combo-card">
-  <h2>Upma Varieties</h2>
-  <ul class="combo-items">
-      <li>Regular Upma - ₹60</li>
-      <li>Dry Upma - ₹80</li>
-      <li>Veg Upma (watery) - ₹80</li>
-    </ul>
-  </div>
 
-  <!-- Sandwich -->
-  <div class="combo-card">
-  <h2>Sandwich Varieties</h2>
-  <ul class="combo-items">
-      <li>Bombay Sandwich - ₹70</li>
-      <li>Veg Sandwich - ₹70</li>
-      <li>Cheese Veg Sandwich - ₹80</li>
-      <li>Paneer/Mushroom Tikka Sandwich - ₹90</li>
-      <li>Chilli Cheese Sandwich - ₹90</li>
-      <li>Chocolate Sandwich - ₹90</li>
-    </ul>
-  </div>
+      <!-- Combo 2 -->
+      <div class="combo-card">
+        <h2>Combo-2</h2>
+        <ul class="combo-items">
+          <li>Chapati / Phulka</li>
+          <li>Any Curry</li>
+          <li>White Rice</li>
+          <li>Dal / Sambar / Rasam</li>
+          <li>Curd Rice</li>
+          <li>Salad / Kosambri / Raitha</li>
+          <li>Sweet (choose from the list)</li>
+          <li>Vada (choose from the list)</li>
+          <li>Pickle</li>
+          <li>Papad</li>
+          <li>Buttermilk/Tambuli</li>
+        </ul>
+        <p class="price">Price per plate: ₹250</p>
+        <p class="min-order">Minimum order: 5 plates</p>
+      </div>
 
-  <!-- Rice -->
-   <div class="combo-card">
-  <h2>Rice Varieties</h2>
-  <ul class="combo-items">
-        <li>Bisibelebath</li>
-        <li>Pulav</li>
-        <li>Ghee Rice</li>
-        <li>Jeera Rice</li>
-        <li>Pudina Corn Rice</li>
-        <li>Vangibath</li>
-        <li>Capsicum Rice</li>
-        <li>Gorikai (cluster beans) bath</li>
-        <li>Aloo Methi Rice</li>
-        <li>Pangal</li>
-        <li>Lemon Chitranna</li>
-        <li>Garlic Chitranna</li>
-        <li>Onion Chitranna</li>
-        <li>Special Onion Chitranna</li>
-        <li>Cabbage Rice</li>
-        <li>Palak Paneer Rice</li>
-        <li>Paneer Biriyani</li>
-        <li>Veg Biriyani</li>
-        <li>Coconut Ganji</li>
-        <li>Red Rice Ganji</li>
-        <li>Khichidi</li>
-        <li>Mushroom Bath</li>
-        <li>Paneer Butter Masala Rice</li>
-      </ul>
-    </div>
-  </div>
+      <!-- Combo 3 -->
+      <div class="combo-card">
+        <h2>Combo-3</h2>
+        <ul class="combo-items">
+          <li>2 Chapatis/Phulkas</li>
+          <li>Curry (choose from the list)</li>
+          <li>Rice Item (choose from the list)</li>
+          <li>Raitha</li>
+          <li>Curd Rice</li>
+          <li>Sweet (choose from the list)</li>
+          <li>Vada (choose from the list)</li>
+        </ul>
+        <p class="price">Price per plate: ₹170</p>
+        <p class="min-order">Minimum order: 5 plates</p>
+      </div>
+
+      <!-- Combo 4 -->
+      <div class="combo-card">
+        <h2>Combo-4</h2>
+        <ul class="combo-items">
+          <li>Rice Item(choose from the list) / 2 Chapati/Phulkas</li>
+          <li>Raitha</li>
+          <li>Curd Rice</li>
+          <li>White Rice</li>
+          <li>Rasam/Sambar/Dal</li>
+        </ul>
+        <p class="price">Price per plate: ₹170</p>
+        <p class="min-order">Minimum order: 5 plates</p> 
+      </div>
+
+      <!-- Combo 5 -->
+      <div class="combo-card">
+        <h2>Combo 5 - Simple Meal Plan</h2>
+        <ul class="combo-items">
+          <li>3 Phulkas</li>
+          <li>Curry</li>
+          <li>Curd Rice</li>
+          <li>Rice Item</li>
+        </ul>
+        <p class="price">Price per plate ₹100</p>
+        <p class="min-order">Minimum order: 2 plates</p>
+      </div>
+
+      <!-- Breakfast/Snacks -->
+      <div class="combo-card">
+        <h2>Breakfast/Snacks</h2>
+        <ul class="combo-items">
+          <li>Umpa</li>
+          <li>Soosla - ₹60</li>
+          <li>Poha - ₹60</li>
+          <li>Pasta - </li>
+          <li>Sandwich - </li>
+          <li>Maddur Vada(1pcs) - ₹20</li>
+          <li>Masala Vada(1pcs) - ₹20</li>
+          <li>Cabbage Vada(1pcs) - ₹20</li>
+          <li>Soups</li>
+        </ul>
+      </div>
+
+      <!-- Upma Varieties -->
+      <div class="combo-card">
+        <h2>Upma Varieties</h2>
+        <ul class="combo-items">
+          <li>Regular Upma - ₹60</li>
+          <li>Dry Upma - ₹80</li>
+          <li>Veg Upma (watery) - ₹80</li>
+        </ul>
+      </div>
+
+      <!-- Sandwich Varieties -->
+      <div class="combo-card">
+        <h2>Sandwich Varieties</h2>
+        <ul class="combo-items">
+          <li>Bombay Sandwich - ₹70</li>
+          <li>Veg Sandwich - ₹70</li>
+          <li>Cheese Veg Sandwich - ₹80</li>
+          <li>Paneer/Mushroom Tikka Sandwich - ₹90</li>
+          <li>Chilli Cheese Sandwich - ₹90</li>
+          <li>Chocolate Sandwich - ₹90</li>
+        </ul>
+      </div>
+
+      <!-- Rice Varieties -->
+      <div class="combo-card">
+        <h2>Rice Varieties</h2>
+        <ul class="combo-items">
+          <li>Bisibelebath</li>
+          <li>Pulav</li>
+          <li>Ghee Rice</li>
+          <li>Jeera Rice</li>
+          <li>Pudina Corn Rice</li>
+          <li>Vangibath</li>
+          <li>Capsicum Rice</li>
+          <li>Gorikai (cluster beans) bath</li>
+          <li>Aloo Methi Rice</li>
+          <li>Pangal</li>
+          <li>Lemon Chitranna</li>
+          <li>Garlic Chitranna</li>
+          <li>Onion Chitranna</li>
+          <li>Special Onion Chitranna</li>
+          <li>Cabbage Rice</li>
+          <li>Palak Paneer Rice</li>
+          <li>Paneer Biriyani</li>
+          <li>Veg Biriyani</li>
+          <li>Coconut Ganji</li>
+          <li>Red Rice Ganji</li>
+          <li>Khichidi</li>
+          <li>Mushroom Bath</li>
+          <li>Paneer Butter Masala Rice</li>
+        </ul>
+      </div>
     </div>
   </section>
 
