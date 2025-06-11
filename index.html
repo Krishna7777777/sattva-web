@@ -6,56 +6,123 @@
   <title>Sattva - Mother's Homely Food</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    /* Custom Color Palette */
+    :root {
+      --warm-yellow: #FFF8E1;
+      --sunshine-yellow: #FFECB3;
+      --leaf-green: #E8F5E9;
+      --fresh-green: #C8E6C9;
+      --dark-green: #81C784;
+      --card-bg: #FFFFFF;
+      --text-dark: #333333;
+      --text-accent: #5D4037;
+    }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      color: var(--text-dark);
+      background-color: var(--warm-yellow);
+    }
+    
+    /* Header */
+    .header-bg {
+      background-color: var(--sunshine-yellow);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Hero Section */
+    .hero-bg {
+      background: linear-gradient(135deg, var(--sunshine-yellow) 0%, var(--fresh-green) 100%);
+    }
+    
+    /* About Section */
+    .about-bg {
+      background-color: var(--warm-yellow);
+    }
+    
+    /* Menu Section */
+    .menu-bg {
+      background-color: var(--leaf-green);
+    }
+    
+    /* Contact Section */
+    .contact-bg {
+      background: linear-gradient(135deg, var(--fresh-green) 0%, var(--sunshine-yellow) 100%);
+    }
+    
+    /* Footer */
+    .footer-bg {
+      background-color: var(--dark-green);
+      color: white;
+    }
+    
+    /* Combo Cards */
     .combo-container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      padding: 20px;
+      gap: 25px;
+      padding: 25px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     .combo-card {
-      background-color: #E8EAE2;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      background-color: var(--card-bg);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
       display: flex;
       flex-direction: column;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: all 0.3s ease;
       height: 100%;
+      border: 1px solid rgba(0,0,0,0.05);
     }
 
     .combo-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
     }
-
+    
     .combo-card h2 {
       font-size: 1.6rem;
-      color: #7A9E9F; /* Muted teal for headers */
-      margin-bottom: 8px;
+      color: var(--dark-green);
+      margin-bottom: 10px;
       font-weight: bold;
+      border-bottom: 2px solid var(--fresh-green);
+      padding-bottom: 8px;
     }
 
     .combo-items {
-      list-style-type: disc;
-      padding-left: 20px;
-      color: #3b3b3b;
-      margin-bottom: 12px;
+      list-style-type: none;
+      padding-left: 0;
+      color: var(--text-dark);
+      margin-bottom: 15px;
       flex-grow: 1;
     }
 
     .combo-items li {
-      margin-bottom: 4px;
-      line-height: 1.4;
+      margin-bottom: 6px;
+      line-height: 1.5;
+      padding-left: 20px;
+      position: relative;
+    }
+    
+    .combo-items li:before {
+      content: "•";
+      color: var(--dark-green);
+      position: absolute;
+      left: 0;
     }
 
     .price, .min-order {
       font-weight: bold;
-      color: #444;
+      color: var(--text-accent);
       font-size: 1.1rem;
-      margin-top: 8px;
+      margin-top: 10px;
+    }
+    
+    .price {
+      color: #D32F2F;
     }
 
     @media (max-width: 900px) {
@@ -67,36 +134,73 @@
     @media (max-width: 600px) {
       .combo-container {
         grid-template-columns: 1fr;
-        padding: 10px;
+        padding: 15px;
       }
+    }
+    
+    /* Navigation */
+    .nav-link {
+      color: var(--text-accent);
+      transition: all 0.2s ease;
+      font-weight: 500;
+    }
+    
+    .nav-link:hover {
+      color: var(--dark-green);
+    }
+    
+    /* Section Headings */
+    .section-heading {
+      color: var(--text-accent);
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-heading:after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background-color: var(--dark-green);
     }
   </style>
 </head>
 <body>
-<header class="bg-yellow-200 sticky top-0 z-50">
-  <div class="max-w-6xl mx-auto p-4 flex items-center">
-    <div class="src-center">
-      <img src="logo.png" alt="Sattva Logo" width="200">
+  <!-- Header -->
+  <header class="header-bg">
+    <div class="max-w-6xl mx-auto p-4 flex items-center">
+      <div class="src-center">
+        <img src="logo.png" alt="Sattva Logo" width="200">
+      </div>
+      <nav class="flex space-x-6 ml-auto">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#combos" class="nav-link">Menu</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
     </div>
-    <nav class="flex space-x-4 ml-auto">
-      <a href="#about" class="hover:text-orange-600">About</a>
-      <a href="#contact" class="hover:text-orange-600">Contact</a>
-    </nav>
-  </div>
-</header>
+  </header>
 
-<section class="bg-green-100 py-16 text-center">
-  <h2 class="text-4xl font-sans mb-4">Mother's Homely Food</h2>
-  <p class="text-lg text-yellow-800 max-w-xl mx-auto">
-    Delicious, pure, and traditional meals cooked with love – just like Amma makes.
-  </p>
-</section>
+  <!-- Hero Section -->
+  <section class="hero-bg py-20 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-5xl font-bold mb-6 text-brown-800">Mother's Homely Food</h1>
+      <p class="text-xl text-brown-700">Delicious, pure, and traditional meals cooked with love – just like Amma makes.</p>
+    </div>
+  </section>
 
-  <section id="about" class="max-w-5xl mx-auto py-16 px-4">
-    <h3 class="text-2xl font-bold mb-4 text-yellow-600">About Us</h3>
-    <p class="text-lg leading-relaxed">
-      Welcome to <strong>Sattva</strong> Mother's Homely Food, where every meal is a labor of love. Cooking has always been my passion, and the kitchen is where my heart truly feels at home. I've always cherished the joy of preparing meals for my family and loved ones, and that warmth now extends to every dish we serve. At Sattva, we believe that the secret ingredient to truly delicious food is love — combined with carefully handpicked ingredients and traditional recipes passed down through generations. Our motto, "Delicious pure traditional meals just how amma makes," reflects our commitment to bringing you the comfort, purity, and authenticity of home-cooked food in every bite.
-    </p>
+  <!-- About Section -->
+  <section id="about" class="about-bg py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="section-heading text-3xl font-bold mb-8">About Us</h2>
+      <p class="text-lg leading-relaxed mb-6">
+        Welcome to <strong class="text-green-600">Sattva</strong> Mother's Homely Food, where every meal is a labor of love. Cooking has always been my passion, and the kitchen is where my heart truly feels at home.
+      </p>
+      <p class="text-lg leading-relaxed">
+        I've always cherished the joy of preparing meals for my family and loved ones, and that warmth now extends to every dish we serve. At Sattva, we believe that the secret ingredient to truly delicious food is love — combined with carefully handpicked ingredients and traditional recipes passed down through generations.
+      </p>
+    </div>
   </section>
 
   <section id="combos" class="py-8">
