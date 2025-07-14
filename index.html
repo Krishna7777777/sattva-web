@@ -3,199 +3,249 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sattva Mother's Homely Food offers delicious, traditional meals cooked with love. Order now in Bangalore!" />
+  <meta name="keywords" content="homely food, traditional meals, Bangalore catering, Sattva food" />
   <title>Sattva - Mother's Homely Food</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Custom Color Palette */
     :root {
-      --warm-yellow: #FFF8E1;
-      --sunshine-yellow: #FFECB3;
-      --leaf-green: #E8F5E9;
-      --fresh-green: #C8E6C9;
-      --dark-green: #81C784;
-      --card-bg: #FFFFFF;
-      --text-dark: #333333;
-      --text-accent: #5D4037;
+      --spicy-orange: #F97316;
+      --warm-red: #DC2626;
+      --lush-green: #22C55E;
+      --creamy-yellow: #FEF3C7;
+      --card-bg: #FFF7ED;
+      --text-dark: #1F2937;
+      --text-accent: #9A3412;
     }
-    
+
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       color: var(--text-dark);
-      background-color: var(--warm-yellow);
+      background-color: var(--creamy-yellow);
+      scroll-behavior: smooth;
     }
-    
-    /* Header */
+
     .header-bg {
-      background-color: var(--sunshine-yellow);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      background-color: var(--spicy-orange);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 20;
+      transition: background-color 0.3s ease;
     }
-    
-    /* Hero Section */
+
+    .header-bg.scrolled {
+      background-color: rgba(249, 115, 22, 0.9);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
     .hero-bg {
-      background: linear-gradient(135deg, var(--sunshine-yellow) 0%, var(--fresh-green) 100%);
-    }
-    
-    /* About Section */
-    .about-bg {
-      background-color: var(--warm-yellow);
-    }
-    
-    /* Menu Section */
-    .menu-bg {
-      background-color: var(--leaf-green);
-    }
-    
-    /* Contact Section */
-    .contact-bg {
-      background: linear-gradient(135deg, var(--fresh-green) 0%, var(--sunshine-yellow) 100%);
-    }
-    
-    /* Footer */
-    .footer-bg {
-      background-color: var(--dark-green);
+      background: linear-gradient(135deg, var(--spicy-orange) 0%, var(--lush-green) 100%);
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       color: white;
     }
-    
-    /* Combo Cards */
+
+    .about-bg {
+      background-color: var(--creamy-yellow);
+    }
+
+    .menu-bg {
+      background: linear-gradient(135deg, var(--lush-green) 0%, var(--creamy-yellow) 100%);
+    }
+
+    .contact-bg {
+      background-color: var(--creamy-yellow);
+    }
+
+    .footer-bg {
+      background: linear-gradient(135deg, var(--spicy-orange) 0%, var(--warm-red) 100%);
+      color: white;
+    }
+
     .combo-container {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      padding: 25px;
-      max-width: 1200px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      padding: 3rem 1rem;
+      max-width: 1400px;
       margin: 0 auto;
+      animation: fadeIn 1s ease-in;
     }
 
     .combo-card {
-      background-color: var(--card-bg);
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-      display: flex;
-      flex-direction: column;
-      transition: all 0.3s ease;
-      height: 100%;
-      border: 1px solid rgba(0,0,0,0.05);
+      background: linear-gradient(145deg, var(--card-bg) 0%, #FFFFFF 100%);
+      padding: 1.5rem;
+      border-radius: 1.25rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid var(--lush-green);
     }
 
     .combo-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
-    
+
     .combo-card h2 {
-      font-size: 1.6rem;
-      color: var(--dark-green);
-      margin-bottom: 10px;
-      font-weight: bold;
-      border-bottom: 2px solid var(--fresh-green);
-      padding-bottom: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
+      color: var(--spicy-orange);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--lush-green);
+      padding-bottom: 0.5rem;
     }
 
     .combo-items {
-      list-style-type: none;
-      padding-left: 0;
+      list-style: none;
+      padding: 0;
       color: var(--text-dark);
-      margin-bottom: 15px;
-      flex-grow: 1;
+      margin-bottom: 1.5rem;
     }
 
     .combo-items li {
-      margin-bottom: 6px;
-      line-height: 1.5;
-      padding-left: 20px;
+      margin-bottom: 0.75rem;
+      line-height: 1.7;
       position: relative;
+      padding-left: 1.75rem;
+      font-size: 1rem;
     }
-    
+
     .combo-items li:before {
-      content: "•";
-      color: var(--dark-green);
+      content: "🍴";
       position: absolute;
       left: 0;
+      font-size: 1rem;
+      color: var(--lush-green);
     }
 
     .price, .min-order {
-      font-weight: bold;
-      color: var(--text-accent);
-      font-size: 1.1rem;
-      margin-top: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.15rem;
+      margin-top: 0.75rem;
     }
-    
+
     .price {
-      color: #D32F2F;
+      color: var(--warm-red);
     }
 
-    @media (max-width: 900px) {
-      .combo-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .combo-container {
-        grid-template-columns: 1fr;
-        padding: 15px;
-      }
-    }
-    
-    /* Navigation */
-    .nav-link {
+    .min-order {
       color: var(--text-accent);
-      transition: all 0.2s ease;
+    }
+
+    .nav-link {
+      font-family: 'Poppins', sans-serif;
+      color: white;
       font-weight: 500;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
-    
-    .nav-link:hover {
-      color: var(--dark-green);
+
+    .nav-link:hover, .nav-link:focus {
+      color: var(--lush-green);
+      transform: scale(1.1);
+      outline: none;
     }
-    
-    /* Section Headings */
+
     .section-heading {
+      font-family: 'Poppins', sans-serif;
       color: var(--text-accent);
       position: relative;
       display: inline-block;
+      font-weight: 700;
     }
-    
+
     .section-heading:after {
       content: "";
       position: absolute;
-      bottom: -8px;
+      bottom: -0.5rem;
       left: 0;
-      width: 50px;
-      height: 3px;
-      background-color: var(--dark-green);
+      width: 4rem;
+      height: 5px;
+      background: linear-gradient(90deg, var(--spicy-orange), var(--lush-green));
+      border-radius: 3px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, var(--spicy-orange), var(--warm-red));
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 9999px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in-section {
+      animation: fadeIn 1s ease-in;
+    }
+
+    @media (max-width: 768px) {
+      .hero-bg {
+        min-height: 70vh;
+      }
+      .combo-container {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+      }
+      .hero-bg h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-bg h1 {
+        font-size: 2rem;
+      }
+      .hero-bg p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
   <!-- Header -->
   <header class="header-bg">
-    <div class="max-w-6xl mx-auto p-4 flex items-center">
-      <div class="src-center">
-        <img src="logo.png" alt="Sattva Logo" width="200">
-      </div>
-      <nav class="flex space-x-6 ml-auto">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#combos" class="nav-link">Menu</a>
-        <a href="#contact" class="nav-link">Contact</a>
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <img src="logo.png" alt="Sattva Logo" class="h-14">
+      <nav class="flex space-x-8">
+        <a href="#about" class="nav-link" aria-label="About Sattva">About</a>
+        <a href="#combos" class="nav-link" aria-label="Menu">Menu</a>
+        <a href="#contact" class="nav-link" aria-label="Contact Us">Contact</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero-bg py-20 text-center">
-    <div class="max-w-4xl mx-auto px-4">
-      <h1 class="text-5xl font-bold mb-6 text-brown-800">Mother's Homely Food</h1>
-      <p class="text-xl text-brown-700">Delicious, pure, and traditional meals cooked with love – just like Amma makes.</p>
+  <section class="hero-bg">
+    <div class="max-w-5xl mx-auto px-4">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 font-poppins">Mother's Homely Food</h1>
+      <p class="text-lg md:text-2xl mb-8">Delicious, pure, and traditional meals cooked with love – just like Amma makes.</p>
+      <a href="#combos" class="btn-primary inline-block">Explore Menu</a>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="about-bg py-16 px-4">
+  <section id="about" class="about-bg py-20 px-4 fade-in-section">
     <div class="max-w-5xl mx-auto">
-      <h2 class="section-heading text-3xl font-bold mb-8">About Us</h2>
+      <h2 class="section-heading text-4xl mb-10">About Us</h2>
       <p class="text-lg leading-relaxed mb-6">
-        Welcome to <strong class="text-green-600">Sattva</strong> Mother's Homely Food, where every meal is a labor of love. Cooking has always been my passion, and the kitchen is where my heart truly feels at home.
+        Welcome to <strong class="text-orange-600">Sattva</strong> Mother's Homely Food, where every meal is a labor of love. Cooking has always been my passion, and the kitchen is where my heart truly feels at home.
       </p>
       <p class="text-lg leading-relaxed">
         I've always cherished the joy of preparing meals for my family and loved ones, and that warmth now extends to every dish we serve. At Sattva, we believe that the secret ingredient to truly delicious food is love — combined with carefully handpicked ingredients and traditional recipes passed down through generations.
@@ -203,7 +253,8 @@
     </div>
   </section>
 
-  <section id="combos" class="py-8">
+  <!-- Menu Section -->
+  <section id="combos" class="menu-bg py-16">
     <div class="combo-container">
       <!-- Combo 1 -->
       <div class="combo-card">
@@ -273,7 +324,7 @@
           <li>Rasam/Sambar/Dal</li>
         </ul>
         <p class="price">Price per plate: ₹170</p>
-        <p class="min-order">Minimum order: 5 plates</p> 
+        <p class="min-order">Minimum order: 5 plates</p>
       </div>
 
       <!-- Combo 5 -->
@@ -288,6 +339,8 @@
         <p class="price">Price per plate ₹100</p>
         <p class="min-order">Minimum order: 2 plates</p>
       </div>
+
+      <!-- Special Dishes -->
       <div class="combo-card">
         <h2>Special Dishes</h2>
         <ul class="combo-items">
@@ -302,6 +355,7 @@
           <strong>Enquire for seasonal dishes</strong>
         </ul>
       </div>
+
       <!-- Breakfast/Snacks -->
       <div class="combo-card">
         <h2>Breakfast/Snacks</h2>
@@ -371,6 +425,8 @@
           <li>Fried Rice</li>
         </ul>
       </div>
+
+      <!-- Rasam/Sambar/Dal Varieties -->
       <div class="combo-card">
         <h2>Rasam/Sambar/Dal Varieties</h2>
         <ul class="combo-items">
@@ -389,6 +445,8 @@
           <li>Plain Dal</li>
         </ul>
       </div>
+
+      <!-- Sweet Varieties -->
       <div class="combo-card">
         <h2>Sweet Varieties</h2>
         <ul class="combo-items">
@@ -406,6 +464,8 @@
           <li>Besan Barfi</li>
         </ul>
       </div>
+
+      <!-- Vada Varieties -->
       <div class="combo-card">
         <h2>Vada Varieties</h2>
         <ul class="combo-items">
@@ -419,6 +479,8 @@
           <li>Golibaje</li>
         </ul>
       </div>
+
+      <!-- Curries -->
       <div class="combo-card">
         <h2>Curries</h2>
         <ul class="combo-items">
@@ -441,6 +503,8 @@
           <li>Dal Fry</li>
         </ul>
       </div>
+
+      <!-- Palya Varieties -->
       <div class="combo-card">
         <h2>Palya Varieties</h2>
         <ul class="combo-items">
@@ -459,6 +523,8 @@
           <li>Pumpkin</li>
         </ul>
       </div>
+
+      <!-- Soup Varieties -->
       <div class="combo-card">
         <h2>Soup Varieties</h2>
         <ul class="combo-items">
@@ -472,18 +538,29 @@
     </div>
   </section>
 
-  <section id="contact" class="bg-green-100 py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-2xl font-bold mb-4 text-green-500">Get in Touch</h3>
-      <p class="mb-6">Want to place an order? Reach out via WhatsApp or email!</p>
-      <strong>Orders Need to be Placed 1 Day Prior</strong>
-      <p class="font-semibold">📞 +91 9686358585</p>
-      <p class="font-semibold">📧 sattvahomelyfoods@gmail.com</p>
+  <!-- Contact Section -->
+  <section id="contact" class="contact-bg py-20 px-4 fade-in-section">
+    <div class="max-w-2xl mx-auto text-center bg-white p-10 rounded-2xl shadow-xl border border-orange-200">
+      <h3 class="text-3xl font-bold mb-6 text-orange-600 font-poppins">Get in Touch</h3>
+      <p class="mb-6 text-gray-700 text-lg">Want to place an order? Reach out via WhatsApp or email!</p>
+      <strong class="block mb-6 text-gray-800">Orders Need to be Placed 1 Day Prior</strong>
+      <p class="font-semibold text-gray-800 mb-4">📞 <a href="tel:+919686358585" class="hover:text-orange-600 transition-colors">+91 9686358585</a></p>
+      <p class="font-semibold text-gray-800 mb-6">📧 <a href="mailto:sattvahomelyfoods@gmail.com" class="hover:text-orange-600 transition-colors">sattvahomelyfoods@gmail.com</a></p>
+      <a href="#contact" class="btn-primary inline-block">Order Now</a>
     </div>
   </section>
 
-  <footer class="text-center text-sm py-4 text-gray-600">
-    © 2025 Sattva. All rights reserved.
+  <!-- Footer -->
+  <footer class="footer-bg text-center py-8">
+    <p class="text-sm font-poppins">© <script>document.write(new Date().getFullYear())</script> Sattva. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Add scrolled class to header on scroll
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.header-bg');
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
 </body>
 </html>
