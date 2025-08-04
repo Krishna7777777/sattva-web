@@ -10,11 +10,11 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
-      --primary-teal: #2B6A6C; /* Rich teal for headers and accents */
-      --vibrant-pink: #EC4899; /* Lively pink for buttons and highlights */
-      --soft-cream: #FFF9F3; /* Soft cream background for a clean look */
+      --primary-orange: #FDBA74; /* Light, warm orange for headers and accents */
+      --light-green: #A7F3D0; /* Soft, fresh green for secondary accents */
+      --soft-white: #FEFCE8; /* Creamy white background for a clean look */
       --muted-gray: #6B7280; /* Neutral gray for text and borders */
-      --accent-pink: #F9A8D4; /* Light pink for secondary accents */
+      --accent-green: #D1FAE5; /* Very light green for additional accents */
       --card-bg: #FFFFFF; /* Pure white for cards */
       --text-dark: #2D3748; /* Deep gray for text */
     }
@@ -22,12 +22,12 @@
     body {
       font-family: 'Open Sans', sans-serif;
       color: var(--text-dark);
-      background-color: var(--soft-cream);
+      background-color: var(--soft-white);
       scroll-behavior: smooth;
     }
 
     .header-bg {
-      background-color: var(--primary-teal);
+      background-color: var(--primary-orange);
       position: fixed;
       top: 0;
       width: 100%;
@@ -36,35 +36,35 @@
     }
 
     .header-bg.scrolled {
-      background-color: rgba(43, 106, 108, 0.9);
+      background-color: rgba(253, 186, 116, 0.9);
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .hero-bg {
-      background: linear-gradient(135deg, var(--primary-teal) 0%, var(--accent-pink) 100%);
+      background: linear-gradient(135deg, var(--primary-orange) 0%, var(--accent-green) 100%);
       min-height: 90vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: white;
+      color: var(--text-dark);
     }
 
     .about-bg {
-      background-color: var(--soft-cream);
+      background-color: var(--soft-white);
     }
 
     .menu-bg {
-      background: linear-gradient(135deg, var(--accent-pink) 0%, var(--soft-cream) 100%);
+      background: linear-gradient(135deg, var(--accent-green) 0%, var(--soft-white) 100%);
     }
 
     .contact-bg {
-      background-color: var(--soft-cream);
+      background-color: var(--soft-white);
     }
 
     .footer-bg {
-      background: linear-gradient(135deg, var(--primary-teal) 0%, var(--vibrant-pink) 100%);
-      color: white;
+      background: linear-gradient(135deg, var(--primary-orange) 0%, var(--light-green) 100%);
+      color: var(--text-dark);
     }
 
     .combo-container {
@@ -83,7 +83,7 @@
       border-radius: 1rem;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: 1px solid var(--accent-pink);
+      border: 1px solid var(--accent-green);
     }
 
     .combo-card:hover {
@@ -94,10 +94,10 @@
     .combo-card h2 {
       font-family: 'Poppins', sans-serif;
       font-size: 1.8rem;
-      color: var(--primary-teal);
+      color: var(--primary-orange);
       font-weight: 700;
       margin-bottom: 1rem;
-      border-bottom: 2px solid var(--accent-pink);
+      border-bottom: 2px solid var(--accent-green);
       padding-bottom: 0.5rem;
     }
 
@@ -121,7 +121,7 @@
       position: absolute;
       left: 0;
       font-size: 1rem;
-      color: var(--accent-pink);
+      color: var(--light-green);
     }
 
     .price, .min-order {
@@ -132,7 +132,7 @@
     }
 
     .price {
-      color: var(--vibrant-pink);
+      color: var(--primary-orange);
     }
 
     .min-order {
@@ -141,20 +141,20 @@
 
     .nav-link {
       font-family: 'Poppins', sans-serif;
-      color: white;
+      color: var(--text-dark);
       font-weight: 500;
       transition: color 0.3s ease, transform 0.3s ease;
     }
 
     .nav-link:hover, .nav-link:focus {
-      color: var(--accent-pink);
+      color: var(--light-green);
       transform: scale(1.1);
       outline: none;
     }
 
     .section-heading {
       font-family: 'Poppins', sans-serif;
-      color: var(--primary-teal);
+      color: var(--primary-orange);
       position: relative;
       display: inline-block;
       font-weight: 700;
@@ -167,13 +167,13 @@
       left: 0;
       width: 4rem;
       height: 4px;
-      background: linear-gradient(90deg, var(--primary-teal), var(--accent-pink));
+      background: linear-gradient(90deg, var(--primary-orange), var(--light-green));
       border-radius: 2px;
     }
 
     .btn-primary {
-      background: linear-gradient(90deg, var(--vibrant-pink), var(--primary-teal));
-      color: white;
+      background: linear-gradient(90deg, var(--primary-orange), var(--light-green));
+      color: var(--text-dark);
       padding: 0.75rem 2rem;
       border-radius: 9999px;
       font-family: 'Poppins', sans-serif;
@@ -197,7 +197,8 @@
 
     #scrollTop {
       transition: opacity 0.3s ease;
-      background-color: var(--accent-pink);
+      background-color: var(--light-green);
+      color: var(--text-dark);
     }
 
     #scrollTop:hover {
@@ -258,7 +259,7 @@
     <div class="max-w-5xl mx-auto">
       <h2 class="section-heading text-4xl mb-10">About Us</h2>
       <p class="text-lg leading-relaxed mb-6">
-        Welcome to <strong class="text-teal-600">Sattva</strong> Mother's Homely Food, where every meal is a labor of love. Cooking has always been my passion, and the kitchen is where my heart truly feels at home.
+        Welcome to <strong class="text-orange-500">Sattva</strong> Mother's Homely Food, where every meal is a labor of love. Cooking has always been my passion, and the kitchen is where my heart truly feels at home.
       </p>
       <p class="text-lg leading-relaxed">
         I've always cherished the joy of preparing meals for my family and loved ones, and that warmth now extends to every dish we serve. At Sattva, we believe that the secret ingredient to truly delicious food is love — combined with carefully handpicked ingredients and traditional recipes passed down through generations.
@@ -563,12 +564,12 @@
 
   <!-- Contact Section -->
   <section id="contact" class="contact-bg py-20 px-4 fade-in-section">
-    <div class="max-w-2xl mx-auto text-center bg-white p-10 rounded-2xl shadow-xl border border-pink-200">
-      <h3 class="text-3xl font-bold mb-6 text-teal-600 font-poppins">Get in Touch</h3>
+    <div class="max-w-2xl mx-auto text-center bg-white p-10 rounded-2xl shadow-xl border border-green-100">
+      <h3 class="text-3xl font-bold mb-6 text-orange-500 font-poppins">Get in Touch</h3>
       <p class="mb-6 text-gray-700 text-lg">Want to place an order? Join our WhatsApp group for more details!</p>
       <strong class="block mb-6 text-gray-800">Orders Need to be Placed 1 Day Prior</strong>
-      <p class="font-semibold text-gray-800 mb-4">📞 <a href="tel:+919686358585" class="hover:text-teal-600 transition-colors">+91 9686358585</a></p>
-      <p class="font-semibold text-gray-800 mb-6">📧 <a href="mailto:sattvahomelyfoods@gmail.com" class="hover:text-teal-600 transition-colors">sattvahomelyfoods@gmail.com</a></p>
+      <p class="font-semibold text-gray-800 mb-4">📞 <a href="tel:+919686358585" class="hover:text-orange-500 transition-colors">+91 9686358585</a></p>
+      <p class="font-semibold text-gray-800 mb-6">📧 <a href="mailto:sattvahomelyfoods@gmail.com" class="hover:text-orange-500 transition-colors">sattvahomelyfoods@gmail.com</a></p>
       <a href="https://chat.whatsapp.com/JM8oJxGEBtnKb00DlAO64Q?mode=ac_t" class="btn-primary inline-block">Join WhatsApp Group</a>
     </div>
   </section>
@@ -578,7 +579,7 @@
     <p class="text-sm font-poppins">© <script>document.write(new Date().getFullYear())</script> Sattva. All rights reserved.</p>
   </footer>
 
-  <button id="scrollTop" class="fixed bottom-8 right-8 bg-accent-pink text-white p-3 rounded-full hidden" onclick="scrollToTop()">
+  <button id="scrollTop" class="fixed bottom-8 right-8 bg-light-green text-dark p-3 rounded-full hidden" onclick="scrollToTop()">
     ↑
   </button>
 
