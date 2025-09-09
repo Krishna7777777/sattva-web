@@ -10,25 +10,24 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
-      --primary-orange: #FFA500; /* Vibrant orange for headers and accents */
-      --light-green: #8AF90B; /* Vibrant lime green for secondary accents */
-      --soft-white: #FEFCE8; /* Creamy white background for a clean look */
-      --muted-gray: #6B7280; /* Neutral gray for text and borders */
-      --accent-green: #A3FC3D; /* Slightly lighter vibrant green for additional accents */
+      --primary-color: #FF6F61; /* Warm coral pink, modern and catchy */
+      --accent-color: #4ECDC4; /* Soft teal, sleek and complementary */
+      --background-color: #F5F7FA; /* Light grayish-blue, clean and modern */
+      --text-color: #2A2E37; /* Dark charcoal, high contrast */
+      --secondary-accent: #45B7D1; /* Lighter teal for highlights */
       --card-bg: #FFFFFF; /* Pure white for cards */
-      --text-dark: #1F2937; /* Darker gray for better text contrast */
     }
 
     body {
       font-family: 'Open Sans', sans-serif;
-      color: var(--text-dark);
-      background-color: var(--soft-white);
+      color: var(--text-color);
+      background-color: var(--background-color);
       scroll-behavior: smooth;
       line-height: 1.6;
     }
 
     .header-bg {
-      background-color: var(--primary-orange);
+      background-color: var(--primary-color);
       position: sticky;
       top: 0;
       width: 100%;
@@ -39,7 +38,7 @@
     }
 
     .header-bg.scrolled {
-      background-color: rgba(255, 165, 0, 0.95);
+      background-color: rgba(255, 111, 97, 0.95);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       padding: 0.5rem 0;
     }
@@ -63,13 +62,13 @@
     }
 
     .hero-bg {
-      background: linear-gradient(135deg, var(--primary-orange) 0%, var(--accent-green) 80%);
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-accent) 80%);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: var(--text-dark);
+      color: var(--text-color);
       padding: 2rem;
       position: relative;
       overflow: hidden;
@@ -92,23 +91,23 @@
     }
 
     .about-bg {
-      background-color: var(--soft-white);
+      background-color: var(--background-color);
       padding: 5rem 2rem;
     }
 
     .menu-bg {
-      background: linear-gradient(135deg, var(--accent-green) 0%, var(--soft-white) 100%);
+      background: linear-gradient(135deg, var(--secondary-accent) 0%, var(--background-color) 100%);
       padding: 5rem 2rem;
     }
 
     .contact-bg {
-      background-color: var(--soft-white);
+      background-color: var(--background-color);
       padding: 5rem 2rem;
     }
 
     .footer-bg {
-      background: linear-gradient(135deg, var(--primary-orange) 0%, var(--light-green) 100%);
-      color: var(--text-dark);
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+      color: var(--text-color);
       padding: 3rem 2rem;
     }
 
@@ -128,7 +127,7 @@
       border-radius: 1.25rem;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
       transition: transform 0.4s ease, box-shadow 0.4s ease;
-      border: 1px solid var(--accent-green);
+      border: 1px solid var(--secondary-accent);
       position: relative;
       overflow: hidden;
       animation: cardEntrance 0.8s ease-out forwards;
@@ -143,10 +142,10 @@
     .combo-card h2 {
       font-family: 'Poppins', sans-serif;
       font-size: 2rem;
-      color: var(--primary-orange);
+      color: var(--primary-color);
       font-weight: 800;
       margin-bottom: 1.25rem;
-      border-bottom: 3px solid var(--accent-green);
+      border-bottom: 3px solid var(--secondary-accent);
       padding-bottom: 0.75rem;
       position: relative;
     }
@@ -154,7 +153,7 @@
     .combo-items {
       list-style: none;
       padding: 0;
-      color: var(--text-dark);
+      color: var(--text-color);
       margin-bottom: 1.75rem;
     }
 
@@ -172,7 +171,7 @@
       position: absolute;
       left: 0;
       font-size: 1.1rem;
-      color: var(--light-green);
+      color: var(--accent-color);
     }
 
     .price, .min-order {
@@ -183,30 +182,31 @@
     }
 
     .price {
-      color: var(--primary-orange);
+      color: var(--primary-color);
     }
 
     .min-order {
-      color: var(--muted-gray);
+      color: var(--text-color);
+      opacity: 0.7;
     }
 
     .nav-link {
       font-family: 'Poppins', sans-serif;
-      color: var(--text-dark);
+      color: var(--text-color);
       font-weight: 600;
       transition: color 0.3s ease, transform 0.3s ease;
       padding: 0.5rem 1rem;
     }
 
     .nav-link:hover, .nav-link:focus {
-      color: var(--light-green);
+      color: var(--accent-color);
       transform: scale(1.05);
       outline: none;
     }
 
     .section-heading {
       font-family: 'Poppins', sans-serif;
-      color: var(--primary-orange);
+      color: var(--primary-color);
       font-size: 2.5rem;
       font-weight: 800;
       position: relative;
@@ -221,13 +221,13 @@
       left: 0;
       width: 5rem;
       height: 5px;
-      background: linear-gradient(90deg, var(--primary-orange), var(--light-green));
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
       border-radius: 3px;
     }
 
     .btn-primary {
-      background: linear-gradient(90deg, var(--primary-orange), var(--light-green));
-      color: var(--text-dark);
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+      color: var(--text-color);
       padding: 0.75rem 2.5rem;
       border-radius: 50px;
       font-family: 'Poppins', sans-serif;
@@ -242,7 +242,7 @@
     .btn-primary:hover {
       transform: translateY(-4px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      background: linear-gradient(90deg, var(--light-green), var(--primary-orange));
+      background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
     }
 
     .btn-primary::after {
@@ -276,8 +276,8 @@
 
     #scrollTop {
       transition: all 0.4s ease;
-      background-color: var(--light-green);
-      color: var(--text-dark);
+      background-color: var(--accent-color);
+      color: var(--text-color);
       padding: 1rem;
       border-radius: 50%;
       font-size: 1.5rem;
@@ -285,7 +285,7 @@
     }
 
     #scrollTop:hover {
-      background-color: var(--primary-orange);
+      background-color: var(--primary-color);
       transform: scale(1.1);
     }
 
