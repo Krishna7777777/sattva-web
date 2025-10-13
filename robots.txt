@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sattvahomelyfoods.netlify.app/sitemap.xml
