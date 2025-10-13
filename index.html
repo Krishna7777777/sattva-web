@@ -292,31 +292,305 @@
         <button onclick="filterMenu('combo')" class="btn-primary mx-2">Combos</button>
         <button onclick="filterMenu('special')" class="btn-primary mx-2">Special Dishes</button>
         <button onclick="filterMenu('breakfast')" class="btn-primary mx-2">Breakfast</button>
-      </div>
+     <!-- Menu Section -->
+<section id="combos" class="menu-bg">
+  <div class="text-center mb-10">
+    <div class="filter-buttons inline-flex flex-wrap justify-center gap-3">
+      <button onclick="filterMenu('all')" class="btn-primary mx-2">All</button>
+      <button onclick="filterMenu('combo')" class="btn-primary mx-2">Combos</button>
+      <button onclick="filterMenu('special')" class="btn-primary mx-2">Special Dishes</button>
+      <button onclick="filterMenu('breakfast')" class="btn-primary mx-2">Breakfast</button>
     </div>
-    <div class="combo-container">
-      <!-- Combo 1 -->
-      <div class="combo-card combo" style="--card-index:1;">
-        <h2>Combo-1</h2>
-        <ul class="combo-items">
-          <li>Rice Item (choose from the list)</li>
-          <li>White Rice</li>
-          <li>Dal / Sambar / Rasam</li>
-          <li>Curd Rice</li>
-          <li>Palya (choose from the list)</li>
-          <li>Salad / Kosambri / Raitha</li>
-          <li>Pickle</li>
-          <li>Papad</li>
-          <li>Sweet (choose from the list)</li>
-          <li>Vada (choose from the list)</li>
-          <li>Buttermilk/Tambuli</li>
-        </ul>
-        <p class="price">₹250/plate</p>
-        <p class="min-order">Minimum 5 plates</p>
-      </div>
-      <!-- Add other combos and sections in similar style without icons -->
+  </div>
+
+  <div class="combo-container">
+
+    <!-- Combo 1 -->
+    <div class="combo-card combo" style="--card-index: 1;">
+      <h2>Combo-1</h2>
+      <ul class="combo-items">
+        <li>Rice Item (choose from the list)</li>
+        <li>White Rice</li>
+        <li>Dal / Sambar / Rasam</li>
+        <li>Curd Rice</li>
+        <li>Palya (choose from the list)</li>
+        <li>Salad / Kosambri / Raitha</li>
+        <li>Pickle</li>
+        <li>Papad</li>
+        <li>Sweet (choose from the list)</li>
+        <li>Vada (choose from the list)</li>
+        <li>Buttermilk / Tambuli</li>
+      </ul>
+      <p class="price">Price per plate: ₹250</p>
+      <p class="min-order">Minimum order: 5 plates</p>
     </div>
-  </section>
+
+    <!-- Combo 2 -->
+    <div class="combo-card combo" style="--card-index: 2;">
+      <h2>Combo-2</h2>
+      <ul class="combo-items">
+        <li>Chapati / Phulka</li>
+        <li>Any Curry</li>
+        <li>White Rice</li>
+        <li>Dal / Sambar / Rasam</li>
+        <li>Curd Rice</li>
+        <li>Salad / Kosambri / Raitha</li>
+        <li>Sweet (choose from the list)</li>
+        <li>Vada (choose from the list)</li>
+        <li>Pickle</li>
+        <li>Papad</li>
+        <li>Buttermilk / Tambuli</li>
+      </ul>
+      <p class="price">Price per plate: ₹250</p>
+      <p class="min-order">Minimum order: 5 plates</p>
+    </div>
+
+    <!-- Combo 3 -->
+    <div class="combo-card combo" style="--card-index: 3;">
+      <h2>Combo-3</h2>
+      <ul class="combo-items">
+        <li>2 Chapatis/Phulkas</li>
+        <li>Curry (choose from the list)</li>
+        <li><strong>OR</strong></li>
+        <li>Rice Item (choose from the list)</li>
+        <li>Raitha</li>
+        <li>Curd Rice</li>
+        <li>Sweet (choose from the list)</li>
+        <li>Vada (choose from the list)</li>
+      </ul>
+      <p class="price">Price per plate: ₹170</p>
+      <p class="min-order">Minimum order: 5 plates</p>
+    </div>
+
+    <!-- Combo 4 -->
+    <div class="combo-card combo" style="--card-index: 4;">
+      <h2>Combo-4</h2>
+      <ul class="combo-items">
+        <li>Rice Item (choose from the list) / 2 Chapati/Phulkas</li>
+        <li>Raitha/Curry</li>
+        <li>Curd Rice</li>
+        <li>White Rice</li>
+        <li>Rasam/Sambar/Dal</li>
+      </ul>
+      <p class="price">Price per plate: ₹170</p>
+      <p class="min-order">Minimum order: 5 plates</p>
+    </div>
+
+    <!-- Combo 5 - Simple Meal Plan -->
+    <div class="combo-card combo" style="--card-index: 5;">
+      <h2>Combo 5 - Simple Meal Plan</h2>
+      <ul class="combo-items">
+        <li>3 Phulkas and Curry</li>
+        <li><strong>OR</strong></li>
+        <li>Rice Item and Raitha</li>
+        <li>Curd Rice</li>
+      </ul>
+      <p class="price">Price per plate ₹100</p>
+      <p class="min-order">Minimum order: 2 plates</p>
+    </div>
+
+    <!-- Special Dishes -->
+    <div class="combo-card special" style="--card-index: 6;">
+      <h2>Special Dishes</h2>
+      <ul class="combo-items">
+        <li>Misal Pav - Rs.100</li>
+        <li>2 Akki Rotti with Curry - Rs.80</li>
+        <li>2 Sabudana Idli with Potato Sagu - Rs.80</li>
+        <li>2 Rava Idli with Potato Sagu - Rs.80</li>
+        <li>Moong Idli with Vegetable Sagu - Rs.80</li>
+        <li>Jhunka - Rs.20</li>
+        <li>Pav Bhaji - Rs.100</li>
+        <li>Cheese Pav Bhaji - Rs.125</li>
+        <li>Chakli - Rs.15</li>
+        <li>Nippatu</li>
+        <strong>Enquire for seasonal dishes</strong>
+      </ul>
+    </div>
+
+    <!-- Breakfast / Snacks -->
+    <div class="combo-card breakfast" style="--card-index: 7;">
+      <h2>Breakfast / Snacks</h2>
+      <ul class="combo-items">
+        <li>Upma</li>
+        <li>2 Idli-Sambar/Chutney - ₹40</li>
+        <li>2 Idli + Vada - Sambar/Chutney - ₹50</li>
+        <li>Soosla - ₹60</li>
+        <li>Poha - ₹60</li>
+        <li>Pasta - ₹90</li>
+        <li>Sandwich</li>
+      </ul>
+    </div>
+
+    <!-- Upma Varieties -->
+    <div class="combo-card breakfast" style="--card-index: 8;">
+      <h2>Upma Varieties</h2>
+      <ul class="combo-items">
+        <li>Regular Upma - ₹60</li>
+        <li>Vegetable Upma (dry) - ₹80</li>
+        <li>Vegetable Upma (watery) - ₹80</li>
+      </ul>
+    </div>
+
+    <!-- Sandwich Varieties -->
+    <div class="combo-card breakfast" style="--card-index: 9;">
+      <h2>Sandwich Varieties</h2>
+      <ul class="combo-items">
+        <li>Bombay Sandwich - ₹70</li>
+        <li>Veg Sandwich - ₹70</li>
+        <li>Cheese Veg Sandwich - ₹80</li>
+        <li>Paneer / Mushroom Sandwich - ₹90</li>
+        <li>Chilli Cheese Sandwich - ₹90</li>
+        <li>Chocolate Sandwich - ₹90</li>
+      </ul>
+    </div>
+
+    <!-- Rice Varieties -->
+    <div class="combo-card combo" style="--card-index: 10;">
+      <h2>Rice Varieties</h2>
+      <ul class="combo-items">
+        <li>Bisibelebath</li>
+        <li>Pulav</li>
+        <li>Ghee Rice</li>
+        <li>Jeera Rice</li>
+        <li>Pudina Corn Rice</li>
+        <li>Vangibath</li>
+        <li>Capsicum Rice</li>
+        <li>Gorikai (cluster beans) bath</li>
+        <li>Aloo Methi Rice</li>
+        <li>Pongal</li>
+        <li>Lemon Chitranna</li>
+        <li>Garlic Chitranna</li>
+        <li>Onion Chitranna</li>
+        <li>Special Onion Chitranna</li>
+        <li>Cabbage Rice</li>
+        <li>Palak Paneer Rice</li>
+        <li>Paneer Biriyani</li>
+        <li>Veg Biriyani</li>
+        <li>Coconut Ganji</li>
+        <li>Red Rice Ganji</li>
+        <li>Khichidi</li>
+        <li>Mushroom Bath</li>
+        <li>Puliyogare</li>
+        <li>Tamarind Rice</li>
+        <li>Avakkai Rice</li>
+        <li>Fried Rice</li>
+      </ul>
+    </div>
+
+    <!-- Rasam / Sambar / Dal -->
+    <div class="combo-card combo" style="--card-index: 11;">
+      <h2>Rasam / Sambar / Dal Varieties</h2>
+      <ul class="combo-items">
+        <li>Udupi Rasam</li>
+        <li>Pepper Rasam</li>
+        <li>Horsegram Rasam</li>
+        <li>Tomato Rasam (garlic)</li>
+        <li>Mix Vegetable Sambar</li>
+        <li>Ashgourd Majjigehuli</li>
+        <li>Tondekayi Majjigehuli</li>
+        <li>Andhra Style Sambar</li>
+        <li>Soppu Sambar</li>
+        <li>Kalu Sambar</li>
+        <li>Palak Dal</li>
+        <li>Sabsige Dal</li>
+        <li>Plain Dal</li>
+      </ul>
+    </div>
+
+    <!-- Sweet Varieties -->
+    <div class="combo-card combo" style="--card-index: 12;">
+      <h2>Sweet Varieties</h2>
+      <ul class="combo-items">
+        <li>Dry Jamun</li>
+        <li>Godhi Laddu</li>
+        <li>Groundnut Laddu</li>
+        <li>Protein Laddu</li>
+        <li>Godhi Payasa</li>
+        <li>Moong Payasa</li>
+        <li>Kadlebele Payasa</li>
+        <li>Gasgase Payasa</li>
+        <li>Gulab Jamun</li>
+        <li>Penori</li>
+        <li>Coconut Barfi</li>
+        <li>Besan Barfi</li>
+      </ul>
+    </div>
+
+    <!-- Vada Varieties -->
+    <div class="combo-card combo" style="--card-index: 13;">
+      <h2>Vada Varieties</h2>
+      <ul class="combo-items">
+        <li>Masala Vada</li>
+        <li>Cabbage Vada</li>
+        <li>Uddin Vada</li>
+        <li>Aloo Bonda</li>
+        <li>Onion Pakoda</li>
+        <li>Soppina Pakoda</li>
+        <li>Sabudana Vada</li>
+        <li>Golibaje</li>
+      </ul>
+    </div>
+
+    <!-- Curries -->
+    <div class="combo-card combo" style="--card-index: 14;">
+      <h2>Curries</h2>
+      <ul class="combo-items">
+        <li>Aloo Gobi Dry</li>
+        <li>Aloo Methi Capsicum Dry</li>
+        <li>Paneer Masala</li>
+        <li>Mushroom Masala</li>
+        <li>Babycorn Masala</li>
+        <li>Capsicum Masala</li>
+        <li>Brinjal Yengai</li>
+        <li>Capsicum Yengai</li>
+        <li>Ridge gourd Yengai</li>
+        <li>Methi Makkai Paneer</li>
+        <li>Tomato Gojju</li>
+        <li>Mix Vegetable Masala</li>
+        <li>Bombay Sagu</li>
+        <li>Channa Masala</li>
+        <li>Rajma Masala</li>
+        <li>Moong Masala</li>
+        <li>Dal Fry</li>
+      </ul>
+    </div>
+
+    <!-- Palya Varieties -->
+    <div class="combo-card combo" style="--card-index: 15;">
+      <h2>Palya Varieties</h2>
+      <ul class="combo-items">
+        <li>Cabbage</li>
+        <li>Cabbage Capsicum</li>
+        <li>Beans</li>
+        <li>Beetroot</li>
+        <li>Soppu bele</li>
+        <li>Bendekayi (ladiesfinger)</li>
+        <li>Tondekayi</li>
+        <li>Chapparada Averekayi</li>
+        <li>Gorikayi</li>
+        <li>Brinjal</li>
+        <li>Chow Chow</li>
+        <li>Mixed Veg</li>
+        <li>Pumpkin</li>
+      </ul>
+    </div>
+
+    <!-- Soup Varieties -->
+    <div class="combo-card combo" style="--card-index: 16;">
+      <h2>Soup Varieties</h2>
+      <ul class="combo-items">
+        <li>Tomato Soup</li>
+        <li>Mushroom Soup</li>
+        <li>Broccoli Soup</li>
+        <li>Pumpkin Soup</li>
+        <li>Dal Kadi</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+  
 
   <!-- Contact -->
   <section id="contact" class="contact-bg py-20">
