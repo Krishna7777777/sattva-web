@@ -2,543 +2,369 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- Viewport and SEO -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sattva Homely Foods — Healthy Hygienic Mother-Made Food in Bangalore</title>
-  <meta name="description" content="Sattva Homely Foods — Traditional, hygienic home-cooked meals and catering in Bangalore. Menu starting from ₹100/plate. Call +91 9686358585." />
-  <meta name="keywords" content="homely food, Bangalore catering, traditional meals, mother-made food, Sattva Homely Foods" />
-  <link rel="canonical" href="https://sattvahomelyfoods.netlify.app/" />
-  <meta name="theme-color" content="#FF6F61" />
-  <meta name="robots" content="index, follow" />
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Sattva Homely Foods — Mother-made Homely Meals (Bangalore)" />
-  <meta property="og:description" content="Healthy, hygienic, traditional meals crafted like Amma makes. Catering and meals from ₹100/plate." />
-  <meta property="og:url" content="https://sattvahomelyfoods.netlify.app/" />
-  <!-- Preconnect for fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Sattva Homely Foods: Healthy, hygienic mother-made catering in Bangalore. Traditional meals from ₹100/plate. Order now at +91 9686358585!" />
+  <meta name="keywords" content="homely food, traditional meals, Bangalore catering, Sattva food, Home cooked hot meals, Mother made meals" />
+  <title>Sattva Homely Foods - Healthy Hygienic Mother Made Food for Catering in Bangalore</title>
+  
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
-  <!-- Tailwind CDN -->
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Structured data -->
+  <!-- JSON-LD for SEO -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Sattva Homely Foods",
-    "description": "Healthy hygienic mother-made food for catering in Bangalore. Traditional meals cooked with love.",
-    "url": "https://sattvahomelyfoods.netlify.app/",
-    "telephone": "+91 9686358585",
-    "address": {"@type": "PostalAddress", "addressLocality": "Bangalore", "addressCountry": "IN"},
-    "servesCuisine": ["Indian", "South Indian", "Homely"],
-    "priceRange": "₹"
-  }
-  </script>
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Sattva Homely Foods",
+  "description": "Healthy hygienic mother-made food for catering in Bangalore. Traditional meals cooked with love.",
+  "url": "https://sattvahomelyfoods.netlify.app/",
+  "telephone": "+91 9686358585",
+  "address": {"@type": "PostalAddress", "addressLocality": "Bangalore", "addressCountry": "IN"},
+  "servesCuisine": "Indian Homely Food",
+  "priceRange": "$$"
+}
+</script>
 
   <style>
-    :root{
-      --primary: #FF6F61;
-      --accent: #4ECDC4;
-      --bg: #F5F7FA;
-      --text: #2A2E37;
-      --card: #FFFFFF;
-      --muted: #6B7280;
+    :root {
+      --primary-color: #6B4C3B; /* Deep coffee brown */
+      --accent-color: #D4AF37; /* Gold accent */
+      --background-gradient: linear-gradient(135deg, #F5EFE6 0%, #D9C9B3 100%);
+      --text-color: #2B2B2B; /* Dark text for contrast */
+      --card-bg: #FFF9F4; /* Light warm cream */
     }
 
-    /* Base */
-    html { scroll-behavior: smooth; }
     body {
-      font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: var(--bg);
-      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      background: var(--background-gradient);
+      color: var(--text-color);
       line-height: 1.6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
-
-    /* Skip link */
-    .skip-link {
-      position: absolute;
-      left: -999px;
-      top: auto;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-    }
-    .skip-link:focus {
-      left: 1rem;
-      top: 1rem;
-      background: white;
-      padding: .5rem 1rem;
-      z-index: 60;
-      border-radius: .25rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,.12);
+      scroll-behavior: smooth;
     }
 
     /* Header */
     .header-bg {
-      background-color: var(--primary);
+      background-color: var(--primary-color);
       position: sticky;
       top: 0;
+      width: 100%;
       z-index: 50;
-      transition: all .28s ease;
-      box-shadow: 0 2px 6px rgba(16,24,40,.06);
+      transition: all 0.4s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      padding: 1rem 0;
     }
-    .header-inner { max-width: 1200px; margin: 0 auto; padding: .75rem 1rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
-    .logo { display:flex; gap:.75rem; align-items:center; color:#fff; text-decoration:none; font-weight:700; letter-spacing:.2px;}
-    .logo img { height:48px; width:auto; border-radius:.5rem; }
-    .nav-links { display:flex; gap:.25rem; align-items:center; }
-    .nav-links a { color:white; font-weight:600; padding:.5rem .75rem; border-radius:.5rem; text-decoration:none; transition:all .18s ease; }
-    .nav-links a:hover, .nav-links a:focus { background: rgba(255,255,255,.1); transform:translateY(-2px); outline:none; }
 
-    /* Mobile menu toggle */
-    .mobile-menu-btn { display:none; background:transparent; border:0; color:white; padding:.4rem; border-radius:.4rem; }
-    .mobile-menu-btn:focus { outline: 2px dashed rgba(255,255,255,.6); }
+    .header-bg.scrolled {
+      background-color: #59392B;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      padding: 0.5rem 0;
+    }
+
+    .header-bg img {
+      height: 4rem;
+      border-radius: 0.5rem;
+      transition: height 0.4s ease;
+    }
+
+    .header-bg.scrolled img {
+      height: 2.5rem;
+    }
+
+    .header-bg nav a {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #FFF9F4;
+      transition: font-size 0.4s ease, color 0.3s ease;
+    }
+
+    .header-bg nav a:hover {
+      color: var(--accent-color);
+    }
+
+    .header-bg.scrolled nav a {
+      font-size: 0.9rem;
+    }
 
     /* Hero */
     .hero-bg {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 80%);
-      color: #0b1220;
-      padding: 4rem 1rem;
-      text-align:center;
-      overflow:hidden;
+      background: linear-gradient(135deg, var(--primary-color) 0%, #8B5E3C 80%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #FFF9F4;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
     }
-    .hero-inner { max-width:1100px; margin:0 auto; }
-    .hero-title { font-family:'Poppins', sans-serif; font-weight:800; font-size:clamp(2rem, 6vw, 4.25rem); line-height:1.02; margin-bottom:1rem; color:#08101a; text-shadow:0 3px 18px rgba(255,255,255,.08); }
-    .hero-sub { font-size:clamp(1rem, 2.2vw, 1.25rem); opacity:.95; margin-bottom:1.25rem; font-weight:500; }
 
-    /* Main layout */
-    main { max-width:1200px; margin: 2rem auto; padding: 0 1rem 4rem; }
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+      z-index:1;
+    }
 
-    /* Menu / Combos grid */
+    .hero-content {
+      position: relative;
+      z-index:2;
+    }
+
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+    }
+
+    /* Sections */
+    .section-heading {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      font-weight: 900;
+      display: inline-block;
+      position: relative;
+      margin-bottom: 2rem;
+      transition: color 0.3s ease;
+    }
+
+    .section-heading:hover {
+      color: var(--accent-color);
+    }
+
+    .section-heading:after {
+      content:"";
+      position:absolute;
+      bottom:-0.75rem;
+      left:0;
+      width:5rem;
+      height:5px;
+      background: var(--accent-color);
+      border-radius:3px;
+    }
+
+    /* Combo Cards */
     .combo-container {
       display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:1.5rem;
-      align-items:stretch;
-      margin-top:1rem;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap:2.5rem;
+      padding:3rem 1.5rem;
+      max-width:1440px;
+      margin:0 auto;
     }
+
     .combo-card {
-      background: linear-gradient(180deg, var(--card), #F8FAFC);
-      border-radius: 1rem;
-      padding:1.25rem;
-      box-shadow: 0 8px 24px rgba(12, 18, 31, 0.06);
-      border: 1px solid rgba(78,205,196,0.08);
-      transform-style: preserve-3d;
-      transition: transform .25s cubic-bezier(.2,.9,.2,1), box-shadow .25s ease;
-      will-change: transform;
-      position:relative;
+      background: var(--card-bg);
+      padding:2rem;
+      border-radius:1rem; /* soft rounded */
+      box-shadow:0 6px 20px rgba(0,0,0,0.08);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border: 1px solid #E0D7C3;
+    }
+
+    .combo-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+
+    .combo-card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--primary-color);
+      margin-bottom:1rem;
+    }
+
+    .combo-items {
+      list-style:none;
+      padding:0;
+      margin-bottom:1.5rem;
+      font-size:1.1rem;
+    }
+
+    .combo-items li {
+      margin-bottom:0.8rem;
+      line-height:1.6;
+      padding-left:0; /* removed icon space */
+    }
+
+    .price {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .min-order {
+      color: var(--text-color);
+      opacity: 0.7;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background: var(--primary-color);
+      color: #FFF9F4;
+      padding: 0.75rem 2.5rem;
+      border-radius: 50px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size:1.1rem;
+      transition: all 0.3s ease;
+      position: relative;
       overflow: hidden;
-      display:flex;
-      flex-direction:column;
-      gap:.75rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
-    /* Pop-out hover default (for devices that support hover) */
-    @media (hover: hover) and (pointer: fine) {
-      .combo-card:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 20px 40px rgba(12,18,31,0.12);
-      }
+    .btn-primary:hover {
+      transform: translateY(-4px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.2);
+      background: var(--accent-color);
+      color: #2B2B2B;
     }
 
-    .combo-head {
-      display:flex;
-      gap:.75rem;
-      align-items:center;
-      justify-content:space-between;
-    }
-    .combo-title { font-family:'Poppins'; font-weight:800; color:var(--primary); font-size:1.15rem; display:flex; gap:.5rem; align-items:center; }
-    .combo-emoji { font-size:1.5rem; }
-    .price-badge {
-      background: linear-gradient(90deg, rgba(78,205,196,.12), rgba(255,111,97,.08));
-      color:var(--text);
-      font-weight:700;
-      padding:.35rem .6rem;
-      border-radius:.6rem;
-      font-size:.95rem;
-      border:1px solid rgba(0,0,0,0.04);
-    }
-    .combo-items { list-style:none; padding:0; margin:0; color:var(--text); font-size:.98rem; }
-    .combo-items li { padding:.35rem 0; display:flex; gap:.6rem; align-items:flex-start; }
-    .combo-items li .dot { min-width:1.25rem; display:inline-flex; align-items:center; justify-content:center; font-size:1rem; }
-
-    .min-order { margin-top:auto; color:var(--muted); font-weight:600; font-size:.95rem; }
-
-    /* Special small text */
-    .muted { color:var(--muted); font-size:.95rem; }
-
-    /* Filter buttons */
-    .filter-buttons { display:flex; gap:.5rem; justify-content:center; flex-wrap:wrap; margin-bottom:1rem; }
-    .filter-btn { background:white; border-radius:999px; padding:.45rem .9rem; font-weight:700; border:1px solid rgba(16,24,40,.06); cursor:pointer; transition:all .16s ease; }
-    .filter-btn[aria-pressed="true"], .filter-btn:focus { outline:none; transform:translateY(-3px); box-shadow:0 8px 20px rgba(12,18,31,0.06); }
-
-    /* Contact card */
-    .contact-card { background:white; padding:1.5rem; border-radius:1rem; box-shadow:0 10px 28px rgba(12,18,31,.06); border:1px solid rgba(78,205,196,.06); }
-
-    /* Footer */
-    footer { background: linear-gradient(135deg, var(--primary), var(--accent)); color:#08101a; padding:2rem 1rem; text-align:center; margin-top:2rem; border-radius: .75rem; }
-
-    /* Mobile responsiveness */
-    @media (max-width: 1024px) {
-      .combo-container { grid-template-columns: repeat(2, 1fr); }
-      .header-inner { padding: .75rem 1rem; }
-    }
-    @media (max-width: 640px) {
-      .nav-links { display:none; }
-      .mobile-menu-btn { display:inline-flex; }
-      .combo-container { grid-template-columns: 1fr; gap:1rem; }
-      main { margin-top: 1rem; }
-      .hero-bg { padding: 3rem 1rem; }
+    /* Scroll to top button */
+    #scrollTop {
+      transition: all 0.4s ease;
+      background-color: var(--accent-color);
+      color: #2B2B2B;
+      padding: 1rem;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
     }
 
-    /* Reduced motion preference */
-    @media (prefers-reduced-motion: reduce) {
-      * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+    #scrollTop:hover {
+      background-color: var(--primary-color);
+      transform: scale(1.1);
     }
 
-    /* Small utility */
-    .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap; }
+    @media(max-width:768px){
+      .combo-container {grid-template-columns:1fr; padding:2rem 1rem;}
+      .hero-content h1{font-size:3rem;}
+      .section-heading{font-size:2rem;}
+    }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#maincontent">Skip to content</a>
 
-  <!-- Header / Nav -->
-  <header class="header-bg" role="banner">
-    <div class="header-inner">
-      <a class="logo" href="/" aria-label="Sattva Homely Foods homepage">
-        <img src="logo.png" alt="Sattva Homely Foods logo" loading="lazy">
-        <span class="sr-only">Sattva Homely Foods</span>
-      </a>
-
-      <nav role="navigation" aria-label="Main navigation">
-        <div class="nav-links" id="desktopNav">
-          <a href="#about" class="nav-link">About</a>
-          <a href="#combos" class="nav-link">Menu</a>
-          <a href="#contact" class="nav-link">Contact</a>
-          <a href="tel:+919686358585" class="nav-link">Call: +91 96863 58585</a>
-        </div>
-
-        <button class="mobile-menu-btn" id="mobileToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu">
-          <!-- simple hamburger -->
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M4 7h16M4 12h16M4 17h16" stroke="#fff" stroke-width="1.6" stroke-linecap="round"></path>
-          </svg>
-        </button>
+  <!-- Header -->
+  <header class="header-bg">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+      <img src="logo.png" alt="Sattva Logo">
+      <nav class="flex space-x-10">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#combos" class="nav-link">Menu</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
-    </div>
-
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="max-w-3xl mx-auto px-4 pb-4" style="display:none;">
-      <div class="mt-2 bg-white rounded-lg p-3 shadow-md">
-        <a class="block p-2 rounded hover:bg-gray-50" href="#about">About</a>
-        <a class="block p-2 rounded hover:bg-gray-50" href="#combos">Menu</a>
-        <a class="block p-2 rounded hover:bg-gray-50" href="#contact">Contact</a>
-        <a class="block p-2 rounded hover:bg-gray-50" href="tel:+919686358585">Call: +91 96863 58585</a>
-      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-bg" aria-label="Hero">
-    <div class="hero-inner">
-      <h1 class="hero-title">Mother's Homely Food — Cooked with Love</h1>
-      <p class="hero-sub">Delicious, pure, and traditional meals — just like Amma makes. Order for events, corporate lunches, or daily homely meals.</p>
-      <a href="#combos" class="filter-btn" style="background:transparent; border:2px solid rgba(255,255,255,.9); color:white; padding:.6rem 1.2rem; font-weight:800;">Explore Menu</a>
+  <!-- Hero -->
+  <section class="hero-bg">
+    <div class="max-w-5xl mx-auto px-4 hero-content">
+      <h1>Mother's Homely Food</h1>
+      <p class="text-lg md:text-2xl mb-8 font-light">Delicious, pure, and traditional meals cooked with love – just like Amma makes.</p>
+      <a href="#combos" class="btn-primary inline-block">Explore Menu</a>
     </div>
   </section>
 
-  <main id="maincontent" role="main">
-    <!-- About -->
-    <section id="about" class="mt-6" aria-labelledby="aboutHeading">
-      <h2 id="aboutHeading" style="font-family:'Poppins'; font-size:1.5rem; color:var(--primary); font-weight:800;">About Us</h2>
-      <div style="display:flex; gap:1rem; align-items:flex-start; margin-top:.75rem; flex-wrap:wrap;">
-        <div style="flex:1; min-width:260px;">
-          <p>Welcome to <strong style="color:var(--primary);">Sattva Homely Foods</strong>. Cooking has always been my passion, and the kitchen is where my heart truly feels at home. We serve healthy, hygienic home-cooked meals and offer catering services across Bangalore.</p>
-        </div>
-        <div style="min-width:240px;">
-          <p class="muted">Orders need to be placed 1 day prior. Minimum order depends on the combo; smaller simple meals start at ₹100/plate.</p>
-        </div>
+  <!-- About -->
+  <section id="about" class="about-bg fade-in-section px-4 py-20">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="section-heading">About Us</h2>
+      <p class="mb-6 text-lg">Welcome to <strong>Sattva</strong> Mother's Homely Food, where every meal is a labor of love.</p>
+      <p class="text-lg">We believe the secret ingredient is love — combined with fresh ingredients and traditional recipes passed down through generations.</p>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section id="combos" class="menu-bg py-20">
+    <div class="text-center mb-10">
+      <div class="filter-buttons inline-flex flex-wrap justify-center gap-3">
+        <button onclick="filterMenu('all')" class="btn-primary mx-2">All</button>
+        <button onclick="filterMenu('combo')" class="btn-primary mx-2">Combos</button>
+        <button onclick="filterMenu('special')" class="btn-primary mx-2">Special Dishes</button>
+        <button onclick="filterMenu('breakfast')" class="btn-primary mx-2">Breakfast</button>
       </div>
-    </section>
-
-    <!-- Catering Services -->
-    <section id="services" class="mt-8" aria-labelledby="servicesHeading">
-      <h3 id="servicesHeading" style="font-family:'Poppins'; font-size:1.25rem; color:var(--primary); font-weight:800;">Catering Services</h3>
-      <p class="muted" style="margin-top:.5rem;">We specialize in healthy, hygienic, traditional recipes — for weddings, office lunches, and small gatherings. Call <a href="tel:+919686358585" style="font-weight:700; color:var(--text);">+91 96863 58585</a> to discuss custom packages.</p>
-    </section>
-
-    <!-- Menu / Filters -->
-    <section id="combos" class="mt-8" aria-labelledby="menuHeading">
-      <h3 id="menuHeading" style="font-family:'Poppins'; font-size:1.5rem; color:var(--primary); font-weight:800; margin-bottom:.5rem;">Menu</h3>
-
-      <div class="filter-buttons" role="tablist" aria-label="Menu filters">
-        <button class="filter-btn" data-cat="all" aria-pressed="true">All</button>
-        <button class="filter-btn" data-cat="combo" aria-pressed="false">Combos</button>
-        <button class="filter-btn" data-cat="special" aria-pressed="false">Special Dishes</button>
-        <button class="filter-btn" data-cat="breakfast" aria-pressed="false">Breakfast</button>
+    </div>
+    <div class="combo-container">
+      <!-- Combo 1 -->
+      <div class="combo-card combo" style="--card-index:1;">
+        <h2>Combo-1</h2>
+        <ul class="combo-items">
+          <li>Rice Item (choose from the list)</li>
+          <li>White Rice</li>
+          <li>Dal / Sambar / Rasam</li>
+          <li>Curd Rice</li>
+          <li>Palya (choose from the list)</li>
+          <li>Salad / Kosambri / Raitha</li>
+          <li>Pickle</li>
+          <li>Papad</li>
+          <li>Sweet (choose from the list)</li>
+          <li>Vada (choose from the list)</li>
+          <li>Buttermilk/Tambuli</li>
+        </ul>
+        <p class="price">₹250/plate</p>
+        <p class="min-order">Minimum 5 plates</p>
       </div>
+      <!-- Add other combos and sections in similar style without icons -->
+    </div>
+  </section>
 
-      <div class="combo-container" id="comboContainer" aria-live="polite">
-        <!-- Card 1 -->
-        <article class="combo-card combo" data-category="combo" tabindex="0" aria-labelledby="combo1title" role="article">
-          <div class="combo-head">
-            <div class="combo-title"><span class="combo-emoji" aria-hidden="true">🍚</span><span id="combo1title">Combo-1</span></div>
-            <div class="price-badge">₹250 / plate</div>
-          </div>
-          <ul class="combo-items">
-            <li><span class="dot">🍛</span> Rice Item (choose)</li>
-            <li><span class="dot">🍚</span> White Rice</li>
-            <li><span class="dot">🥣</span> Dal / Sambar / Rasam</li>
-            <li><span class="dot">🧀</span> Curd Rice</li>
-            <li><span class="dot">🥬</span> Palya (choose)</li>
-            <li><span class="dot">🥗</span> Salad / Kosambri / Raitha</li>
-            <li><span class="dot">🥣</span> Pickle & Papad</li>
-            <li><span class="dot">🍬</span> Sweet (choose)</li>
-            <li><span class="dot">🧆</span> Vada (choose)</li>
-            <li><span class="dot">🥛</span> Buttermilk / Tambuli</li>
-          </ul>
-          <p class="min-order">Minimum order: 5 plates</p>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="combo-card combo" data-category="combo" tabindex="0" aria-labelledby="combo2title" role="article">
-          <div class="combo-head">
-            <div class="combo-title"><span class="combo-emoji">🍽️</span><span id="combo2title">Combo-2</span></div>
-            <div class="price-badge">₹250 / plate</div>
-          </div>
-          <ul class="combo-items">
-            <li><span class="dot">🌾</span> Chapati / Phulka</li>
-            <li><span class="dot">🍲</span> Any Curry</li>
-            <li><span class="dot">🍚</span> White Rice</li>
-            <li><span class="dot">🥣</span> Dal / Sambar / Rasam</li>
-            <li><span class="dot">🧀</span> Curd Rice</li>
-            <li><span class="dot">🥗</span> Salad / Kosambri / Raitha</li>
-            <li><span class="dot">🍬</span> Sweet</li>
-            <li><span class="dot">🧆</span> Vada</li>
-          </ul>
-          <p class="min-order">Minimum order: 5 plates</p>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="combo-card combo" data-category="combo" tabindex="0" aria-labelledby="combo3title" role="article">
-          <div class="combo-head">
-            <div class="combo-title"><span class="combo-emoji">🥘</span><span id="combo3title">Combo-3</span></div>
-            <div class="price-badge">₹170 / plate</div>
-          </div>
-          <ul class="combo-items">
-            <li><span class="dot">🥞</span> 2 Chapatis / Phulkas</li>
-            <li><span class="dot">🍲</span> Curry (choose)</li>
-            <li><span class="dot">➕</span> OR</li>
-            <li><span class="dot">🍚</span> Rice Item (choose)</li>
-            <li><span class="dot">🥣</span> Raitha & Curd Rice</li>
-          </ul>
-          <p class="min-order">Minimum order: 5 plates</p>
-        </article>
-
-        <!-- Card 4 -->
-        <article class="combo-card combo" data-category="combo" tabindex="0" aria-labelledby="combo4title" role="article">
-          <div class="combo-head">
-            <div class="combo-title"><span class="combo-emoji">🍛</span><span id="combo4title">Combo-4</span></div>
-            <div class="price-badge">₹170 / plate</div>
-          </div>
-          <ul class="combo-items">
-            <li><span class="dot">🍚</span> Rice Item / 2 Chapati</li>
-            <li><span class="dot">🥣</span> Raitha / Curry</li>
-            <li><span class="dot">🧀</span> Curd Rice</li>
-            <li><span class="dot">🥣</span> Rasam / Sambar / Dal</li>
-          </ul>
-          <p class="min-order">Minimum order: 5 plates</p>
-        </article>
-
-        <!-- Card 5 - Simple Meal -->
-        <article class="combo-card combo" data-category="combo" tabindex="0" aria-labelledby="combo5title" role="article">
-          <div class="combo-head">
-            <div class="combo-title"><span class="combo-emoji">🥗</span><span id="combo5title">Combo-5 — Simple Meal</span></div>
-            <div class="price-badge">₹100 / plate</div>
-          </div>
-          <ul class="combo-items">
-            <li><span class="dot">🌾</span> 3 Phulkas & Curry</li>
-            <li><span class="dot">➕</span> OR</li>
-            <li><span class="dot">🍚</span> Rice Item & Raitha</li>
-            <li><span class="dot">🧀</span> Curd Rice</li>
-          </ul>
-          <p class="min-order">Minimum order: 2 plates</p>
-        </article>
-
-        <!-- Special Dishes Card -->
-        <article class="combo-card special" data-category="special" tabindex="0" aria-labelledby="specialTitle" role="article">
-          <div class="combo-head">
-            <div class="combo-title"><span class="combo-emoji">✨</span><span id="specialTitle">Special Dishes</span></div>
-            <div class="price-badge">Varied Prices</div>
-          </div>
-          <ul class="combo-items">
-            <li><span class="dot">🥘</span> Misal Pav — ₹100</li>
-            <li><span class="dot">🌾</span> 2 Akki Rotti with Curry — ₹80</li>
-            <li><span class="dot">🍚</span> Pav Bhaji — ₹100 (Cheese +₹25)</li>
-            <li><span class="dot">🥟</span> Chakli — ₹15</li>
-            <li><span class="dot">🍮</span> Gulab Jamun — Seasonal</li>
-            <li class="muted">Enquire for seasonal dishes — call or join WhatsApp group for updates.</li>
-          </ul>
-        </article>
-
-        <!-- Breakfast / Snacks -->
-        <article class="combo-card breakfast" data-category="breakfast" tabindex="0" aria-labelledby="breakfastTitle" role="article">
-          <div class="combo-head">
-            <div class="combo-title"><span class="combo-emoji">🍳</span><span id="breakfastTitle">Breakfast & Snacks</span></div>
-            <div class="price-badge">From ₹40</div>
-          </div>
-          <ul class="combo-items">
-            <li><span class="dot">🥞</span> Upma — ₹60</li>
-            <li><span class="dot">🍚</span> 2 Idli + Sambar/Chutney — ₹40</li>
-            <li><span class="dot">🧆</span> 2 Idli + Vada — ₹50</li>
-            <li><span class="dot">🥪</span> Bombay Sandwich — ₹70</li>
-            <li><span class="dot">🍝</span> Pasta — ₹90</li>
-          </ul>
-        </article>
-
-        <!-- More cards can go here... (Rice varieties, sweets, soups etc.) -->
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="mt-8" aria-labelledby="contactHeading">
-      <h3 id="contactHeading" style="font-family:'Poppins'; font-size:1.25rem; color:var(--primary); font-weight:800;">Get in Touch</h3>
-
-      <div class="contact-card mt-3">
-        <p class="muted">Want to place an order? Join our WhatsApp group or call directly. Orders need to be placed 1 day prior.</p>
-        <p style="margin-top:.75rem; font-weight:700;">📞 <a href="tel:+919686358585" style="color:var(--text);">+91 96863 58585</a></p>
-        <p style="margin-top:.25rem; font-weight:700;">📧 <a href="mailto:sattvahomelyfoods@gmail.com" style="color:var(--text);">sattvahomelyfoods@gmail.com</a></p>
-        <div style="margin-top:1rem;">
-          <a class="filter-btn" href="https://chat.whatsapp.com/JM8oJxGEBtnKb00DlAO64Q?mode=ac_t">Join WhatsApp Group</a>
-          <a class="filter-btn" href="#combos" style="margin-left:.5rem;">View Menu</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer role="contentinfo">
-    <p style="font-weight:700;">© <span id="year"></span> Sattva. All rights reserved.</p>
-  </footer>
+  <!-- Contact -->
+  <section id="contact" class="contact-bg py-20">
+    <div class="max-w-2xl mx-auto text-center bg-white p-12 rounded-2xl shadow-2xl border" style="border-color:#D4AF37;">
+      <h3 class="section-heading text-3xl mb-8">Get in Touch</h3>
+      <p class="mb-8">Want to place an order? Join our WhatsApp group!</p>
+      <strong class="block mb-8">Orders Need to be Placed 1 Day Prior</strong>
+      <p class="mb-6">📞 <a href="tel:+919686358585" class="hover:text-orange-500 transition-colors">+91 9686358585</a></p>
+      <p class="mb-8">📧 <a href="mailto:sattvahomelyfoods@gmail.com" class="hover:text-orange-500 transition-colors">sattvahomelyfoods@gmail.com</a></p>
+      <a href="https://chat.whatsapp.com/JOINLINK" target="_blank" class="btn-primary">Join WhatsApp Group</a>
+    </div>
+  </section>
 
   <!-- Scroll to top -->
-  <button id="scrollTop" class="fixed bottom-6 right-6 text-dark p-3 rounded-full hidden" aria-label="Scroll to top" title="Scroll to top" style="background:var(--accent); color:var(--text); box-shadow:0 8px 20px rgba(12,18,31,.12);">
-    ↑
-  </button>
+  <button id="scrollTop" onclick="scrollToTop()" class="fixed bottom-6 right-6 hidden">↑</button>
 
-  <!-- Small JS for interactions -->
-  <script defer>
-    (function(){
-      // Year
-      document.getElementById('year').textContent = new Date().getFullYear();
-
-      // Mobile menu toggle
-      const mobileToggle = document.getElementById('mobileToggle');
-      const mobileMenu = document.getElementById('mobileMenu');
-      mobileToggle.addEventListener('click', () => {
-        const open = mobileMenu.style.display === 'block';
-        mobileMenu.style.display = open ? 'none' : 'block';
-        mobileToggle.setAttribute('aria-expanded', String(!open));
-      });
-
-      // Filter buttons
-      const filterBtns = document.querySelectorAll('.filter-btn[data-cat], .filter-btn[data-cat="all"]');
-      const cards = document.querySelectorAll('.combo-card');
-      // handle filter when pressed
-      document.querySelectorAll('.filter-btn[data-cat]').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const cat = btn.getAttribute('data-cat');
-          // update aria-pressed
-          document.querySelectorAll('.filter-btn[data-cat]').forEach(b => b.setAttribute('aria-pressed', 'false'));
-          btn.setAttribute('aria-pressed', 'true');
-
-          cards.forEach(card => {
-            const matches = (cat === 'all') || card.dataset.category?.split(' ').includes(cat);
-            card.style.display = matches ? 'flex' : 'none';
-          });
-        });
-      });
-
-      // Keyboard accessibility for cards (enter to open details future)
-      cards.forEach(c => {
-        c.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            c.classList.toggle('open');
-          }
-        });
-      });
-
-      // Scroll to top button + header change
-      const scrollTopBtn = document.getElementById('scrollTop');
-      window.addEventListener('scroll', () => {
-        const header = document.querySelector('.header-bg');
-        header.classList.toggle('scrolled', window.scrollY > 50);
-        if (window.scrollY > 300) {
-          scrollTopBtn.classList.remove('hidden');
-        } else scrollTopBtn.classList.add('hidden');
-      });
-      scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-      // 3D tilt / pop-out effect for each card (pointer fine devices)
-      const supportsPointer = window.matchMedia('(pointer: fine)').matches;
-      if (supportsPointer) {
-        const tiltCards = document.querySelectorAll('.combo-card');
-        tiltCards.forEach(card => {
-          const rectPadding = 20; // padding used for sensitivity
-          let rect = null;
-          card.addEventListener('mouseenter', (ev) => {
-            rect = card.getBoundingClientRect();
-            card.style.transition = 'transform .08s cubic-bezier(.2,.9,.2,1), box-shadow .18s ease';
-            card.style.willChange = 'transform';
-          });
-          card.addEventListener('mousemove', (ev) => {
-            if (!rect) rect = card.getBoundingClientRect();
-            // cursor position relative to card center
-            const x = ev.clientX - rect.left;
-            const y = ev.clientY - rect.top;
-            const cx = rect.width / 2;
-            const cy = rect.height / 2;
-            const dx = (x - cx) / cx; // -1 .. 1
-            const dy = (y - cy) / cy; // -1 .. 1
-            const tiltX = (dy * -6); // rotateX (invert for natural)
-            const tiltY = (dx * 6); // rotateY
-            const scale = 1.02;
-            card.style.transform = `perspective(900px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateZ(6px) scale(${scale})`;
-            card.style.boxShadow = '0 30px 60px rgba(12,18,31,0.12)';
-          });
-          card.addEventListener('mouseleave', () => {
-            card.style.transform = '';
-            card.style.boxShadow = '';
-            card.style.transition = 'transform .25s cubic-bezier(.2,.9,.2,1), box-shadow .25s ease';
-            rect = null;
-          });
-          // Ensure keyboard focus also shows subtle pop
-          card.addEventListener('focus', () => {
-            card.style.transform = 'translateY(-8px) scale(1.02)';
-            card.style.boxShadow = '0 20px 40px rgba(12,18,31,0.12)';
-          });
-          card.addEventListener('blur', () => {
-            card.style.transform = '';
-            card.style.boxShadow = '';
-          });
-        });
+  <script>
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.header-bg');
+      if(window.scrollY > 50){
+        header.classList.add('scrolled');
+        scrollTopBtn.classList.remove('hidden');
+      } else {
+        header.classList.remove('scrolled');
+        scrollTopBtn.classList.add('hidden');
       }
+    });
+    
+    function scrollToTop() {
+      window.scrollTo({top:0, behavior:'smooth'});
+    }
 
-      // Improve performance: lazy load images already used via loading="lazy"
-      // (if you add more images dynamically later, consider IntersectionObserver)
-
-      // Accessibility: let filter buttons respond to keyboard Enter
-      document.querySelectorAll('.filter-btn').forEach(b => {
-        b.addEventListener('keyup', (e) => {
-          if (e.key === 'Enter') b.click();
-        });
+    function filterMenu(category){
+      const cards = document.querySelectorAll('.combo-card');
+      cards.forEach(card => {
+        if(category === 'all'){
+          card.style.display = 'block';
+        } else {
+          if(card.classList.contains(category)){
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        }
       });
-    })();
+    }
   </script>
 </body>
 </html>
+
